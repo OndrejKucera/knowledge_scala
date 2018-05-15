@@ -1,6 +1,7 @@
 Scala Syntax
 ==============
 
+- Parentheses and dots are optional
 - Scala has **default values** for parameters (no need to do overloading)
 `def log(message: String, level: String = "INFO") = println(s"$level: $message")`
 - **Tuple** is an immutable object sequence created as comma-separated values. i.e. `(1,2,3)` tuple literal (Tuple3)
