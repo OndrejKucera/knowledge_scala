@@ -14,8 +14,9 @@ Generela information
 - **method main** has to has specific signature. It has to take an Array of Strings as its argument, and its return type must be Unit. When you run a program, Scala will look for a method named main. Main method is entry point for program, which JVM requires.
 - **procedures** (or impure functions) rather than functions, to emphasize the fact that they have side effects
 - If all **recursive calls** made by a function are in **tail position**, Scala automatically compiles the recursion to iterative loops that don’t consume call stack frames for each iteration. (@annotation.tailrec)
+- The left of the arrow ( `<-` ) defines a val
 
-## Evaluation strategy:
+## Evaluation strategy
 - We can change the evaluating strategy: from call-by-value to call-by-name
 - **Call-by-value** has advantage that it evaluates every function argument only once (Scala normally uses)
 - **Call-by-name** has advantage that a function argument is not evaluated if the corresponding parameters is not used in the evaluation of the function body
@@ -24,11 +25,14 @@ Generela information
 - `def loop: Boolean = loop`, is going to be evaluated always
 - `val loop: Boolean = loop`, is going to be evaluated immediately and won’t terminate
 
-## Syntax, etc.
-- the left of the arrow ( `<-` ) defines a val
+## Pattern matching
+- Works like fancy switch
+- Each case in match consist of the pattern
+
+## Variadic function
+- little syntactic sugar for creating and passing a `Seq` of elements explicitly
+- i.e. func(s: String*)
+
+##  etc.
 - **Polymorphic function** - (kind of parametric polymorphism) It is also called generic function. `def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean`
-
-
-
-
 
