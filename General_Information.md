@@ -27,10 +27,7 @@ Generela information
 
 ## Syntax, etc.
 - the left of the arrow ( `<-` ) defines a val
-- **Polymorphic function** - (kind of parametric polymorphism) It is also called generic function.
-```scala
-def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean
-```
+- **Polymorphic function** - (kind of parametric polymorphism) It is also called generic function. `def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean`
 
 
 
