@@ -7,11 +7,18 @@ Scala Syntax
 - **Implicit parameters** are always in definitons of function as last seperate column.
 - **Polymorphic function** - (kind of parametric polymorphism) It is also called generic function. `def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean`
 
-## Pattern matching
+### Loop
+- `for ( i <- i to 3 ) { ... }`
+- `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
+
+### Scala Classes for Java primitives:
+- Classes like `RichInt`, `RichDouble`, `RichBoolean`, and so on are called rich wrapper classes. They provide convenience methods that can be used for classes in Scala that represent the Java primitive types and String.
+
+### Pattern matching
 - Works like fancy switch
 - Each case in match consist of the pattern
 
-## Variadic function
+### Variadic function
 - Little syntactic sugar for creating and passing a `Seq` of elements explicitly
 - It is possible passing more than one argument
 - i.e. `func(s: String*)`
