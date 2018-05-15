@@ -11,17 +11,28 @@ Generela information
 - There is no equivalent to Java’s static keyword, and an *object* is often used in Scala where you might use a class with static members in Java.
 - Scala has the same compilation model (separate compilation, dynamic class loading) like Java and allows access to thousands of existing high-quality libraries.
 - *scalac* - compiles Scala code into Java Bytecode
-- *boolean expressions* are same as a Java’s. && and || do not always need their right operand to be evaluated.
+- *boolean expressions* are same as a Java’s. `&&` and `||` do not always need their right operand to be evaluated.
 - **method main** has to has specific signature. It has to take an Array of Strings as its argument, and its return type must be Unit. When you run a program, Scala will look for a method named main. Main method is entry point for program, which JVM requires.
+- **procedures** (or impure functions) rather than functions, to emphasize the fact that they have side effects
 - If all **recursive calls** made by a function are in **tail position**, Scala automatically compiles the recursion to iterative loops that don’t consume call stack frames for each iteration. (@annotation.tailrec)
 
-## Definition:
-- def loop: Boolean = loop, is going to be evaluated always
-- val loop: Boolean = loop, is going to be evaluated immediately and won’t terminate
+## Evaluation strategy:
+- We can change the evaluating strategy: from call-by-value to call-by-name
+- **Call-by-value** has advantage that it evaluates every function argument only once (Scala normally uses)
+- **Call-by-name** has advantage that a function argument is not evaluated if the corresponding parameters is not used in the evaluation of the function body
+- Both evaluations reduce to the same final values but only if the function is pure and evaluations terminate.
+- You can force it, when you add arrow ( `=>` ) to parameter of function, in Scala
+- `def loop: Boolean = loop`, is going to be evaluated always
+- `val loop: Boolean = loop`, is going to be evaluated immediately and won’t terminate
 
 ## Syntax, etc.
-- *Polymorphic function* - (kind of parametric polymorphism) It is also called generic function.
-    def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean
-- *procedures* (or impure functions) rather than functions, to emphasize the fact that they have side effects
+- the left of the arrow ( `<-` ) defines a val
+- **Polymorphic function** - (kind of parametric polymorphism) It is also called generic function.
+```scala
+def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean
+```
+
+
+
 
 
