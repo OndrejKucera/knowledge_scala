@@ -7,5 +7,5 @@ The notes are not exhausted knowledge about Scala. The main resources were books
 2) [Functional paradigm](https://github.com/OndrejKucera/knowledge_scala/blob/master/Functional_Paradigm.md)
 3) [Syntax]()
 4) [Scala types](https://github.com/OndrejKucera/knowledge_scala/blob/master/Scala_Types.md)
-?) [Scala Collections]()
+5) [Scala Collections]()
 ...
