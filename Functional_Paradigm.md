@@ -2,7 +2,7 @@ Functional Paradigm
 ====================
 
 ## Imperative paradigm
-mutable variables, assignments, control structure (ifs, loops, returns, breaks, …) -> von Neumann style (John Backus) -> bottleneck 
+- mutable variables, assignments, control structure (ifs, loops, returns, breaks, …) -> von Neumann style (John Backus) -> bottleneck 
 
 ## Functional paradigm
 - First functional language was Lisp in 1959
@@ -12,8 +12,6 @@ mutable variables, assignments, control structure (ifs, loops, returns, breaks, 
 - **Side effect** means that function does more than just return value. (i.e. `i++`)
 - Why is FP popular: simpler reasoning principles, better modularity, good for parallelism
 - Functional programming honors **immutability** and favors **higher-order functions** and **function composition**
-
-
 
 - **Higher order function** (HOF) - are functions that take other functions as arguments and may themselves return functions as their output
 - **Currying** - function return function which is parameter other function def func(...)(...). One of the main reason using this is to assist with type inference.
