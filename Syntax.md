@@ -22,3 +22,10 @@ Scala Syntax
 - Little syntactic sugar for creating and passing a `Seq` of elements explicitly
 - It is possible passing more than one argument
 - i.e. `func(s: String*)`
+
+### String
+- is simply `java.lang.String`
+- The String is automatically converted to `scala.runtime.RichString`. This brings a few useful methods like `capitalize`, `lines`, and `reverse`.
+- Three double quotes (`"""…"""`) for creation of String on more lines
+- String literals with expresion `val message = s "A discount of $discount% has been applied"`
+
