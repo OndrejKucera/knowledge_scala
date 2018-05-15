@@ -16,6 +16,7 @@ Generela information
 - If all **recursive calls** made by a function are in **tail position**, Scala automatically compiles the recursion to iterative loops that don’t consume call stack frames for each iteration. (@annotation.tailrec)
 - The left of the arrow ( `<-` ) defines a val
 - Classes and methods are **public** by default, so you don’t explicitly use the keyword public.
+- Scala, by default, imports `java.lang`, `scala`, `scala.Predef`
 
 ### Scala on the Command Line
 - Even though we don’t explicitly invoke the compiler when using the scala command, the code goes through rigorous compilation and type checking. The scala tool compiles the given script into bytecode in memory and then executes it.
