@@ -12,16 +12,14 @@ Generela information
 - Scala has the same compilation model (separate compilation, dynamic class loading) like Java and allows access to thousands of existing high-quality libraries.
 - *scalac* - compiles Scala code into Java Bytecode
 - *boolean expressions* are same as a Java’s. && and || do not always need their right operand to be evaluated.
+- **method main** has to has specific signature. It has to take an Array of Strings as its argument, and its return type must be Unit. When you run a program, Scala will look for a method named main. Main method is entry point for program, which JVM requires.
+- If all **recursive calls** made by a function are in **tail position**, Scala automatically compiles the recursion to iterative loops that don’t consume call stack frames for each iteration. (@annotation.tailrec)
 
 ## Definition:
 - def loop: Boolean = loop, is going to be evaluated always
 - val loop: Boolean = loop, is going to be evaluated immediately and won’t terminate
 
 ## Syntax, etc.
-- the left of the arrow (<-) defines a val
-- the variables defined using val are immutable and can’t be changed after initialization (Scala compiler will complain). But! The immutability applies to the variable and not the instance to which the variable refers. Prefer val over var as much as possible since that promotes immutability, which leads to fewer errors, and functional style.
-- If all recursive calls made by a function are in tail position, Scala automatically compiles the recursion to iterative loops that don’t consume call stack frames for each iteration. (@annotation.tailrec)
-- *method main* has to has specific signature. It has to take an Array of Strings as its argument, and its return type must be Unit. When you run a program, Scala will look for a method named main. Main method is entry point for program, which JVM requires.
 - *Polymorphic function* - (kind of parametric polymorphism) It is also called generic function.
     def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean
 - *procedures* (or impure functions) rather than functions, to emphasize the fact that they have side effects
