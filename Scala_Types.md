@@ -2,7 +2,7 @@ Scala Types
 ==============
 
 - **Expressions** are computable statements.
-- **Values** cannot be re-assigned. Types of values can be inferred, but you can also explicitly state the type
+- **Values** cannot be re-assigned (Scala compiler will complain). The immutability applies to the variable and not the instance to which the variable refers. Prefer val over var as much as possible since that promotes **immutability**, which leads to fewer errors, and functional style. Types of values can be inferred, but you can also explicitly state the type.
 - **Variables** are like values, except you can re-assign them (mutability)
 - **Blocks** are expressions by surrounding { }. Last expression in the block is the result.
 - **Functions** are expressions that take parameters. Anonymous function (x: Int) => x + 1. You can name it val fun = ( ) => println(“hello”). It can have zero or multiple parameters. Recursive function needs return type in scala.
