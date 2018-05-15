@@ -16,6 +16,19 @@ Generela information
 - If all **recursive calls** made by a function are in **tail position**, Scala automatically compiles the recursion to iterative loops that don’t consume call stack frames for each iteration. (@annotation.tailrec)
 - The left of the arrow ( `<-` ) defines a val
 
+## Scala on the Command Line
+- Even though we don’t explicitly invoke the compiler when using the scala command, the code goes through rigorous compilation and type checking. The scala tool compiles the given script into bytecode in memory and then executes it.
+- However, Scala does not force us to implement the main method
+- hello.sh
+```
+#!/usr/bin/env scala
+println(​"Hello "​ + args(0))
+```
+
+## Compiling Scala:
+- `scalac Sample.scala`
+- run it using either the `scala` tool or the `java` command
+
 ## Evaluation strategy
 - We can change the evaluating strategy: from call-by-value to call-by-name
 - **Call-by-value** has advantage that it evaluates every function argument only once (Scala normally uses)
