@@ -12,6 +12,9 @@ Scala Syntax
 - `for ( i <- i to 3 ) { ... }`
 - `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
 
+### Operator Overloading
+- Scala has no operators, so operator overloading means overloading symbols like +, etc.
+
 ### Scala Classes for Java primitives:
 - Classes like `RichInt`, `RichDouble`, `RichBoolean`, and so on are called rich wrapper classes. They provide convenience methods that can be used for classes in Scala that represent the Java primitive types and String.
 
