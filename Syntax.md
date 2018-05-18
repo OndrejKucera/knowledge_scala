@@ -11,6 +11,7 @@ Scala Syntax
 - **Polymorphic function** - (kind of parametric polymorphism) It is also called generic function. `def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean`
 - SCALA’S *==* represents value-based comparison, no matter what the type is (This is ensured by implementing == as final in the class Any)
 - `eq` method provides identity-based comparison on references
+- **Access Modifier** - default is public, the protected means that only derived classes can access it
 
 ### Loop
 - `for ( i <- i to 3 ) { ... }`
