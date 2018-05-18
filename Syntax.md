@@ -1,7 +1,9 @@
 Scala Syntax
 ==============
 
-- Parentheses and dots are optional
+- When you call the method the parentheses and dots are optional
+- The semicolons are optional 
+- There is no need to use **return**. Scala is usually able to infer the return types of methods.
 - Scala has **default values** for parameters (no need to do overloading)
 `def log(message: String, level: String = "INFO") = println(s"$level: $message")`
 - **Tuple** is an immutable object sequence created as comma-separated values. i.e. `(1,2,3)` tuple literal (Tuple3)
