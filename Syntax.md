@@ -24,6 +24,15 @@ Scala Syntax
 - It is possible passing more than one argument
 - i.e. `func(s: String*)`
 
+### Partial functions
+- it is defined with `case` blocks
+```scala
+scala> List(41, "cat") collect { case i: Int ⇒ i + 1 }
+res1: List[Int] = List(42)
+```
+- Scala has built-in support for partial functions thanks to the `PartialFunction` trait
+A PartialFunction must provides a method `isDefinedAt`, which allows the caller of the partial function to know, beforehand, whether the function can return a result for a given input value.
+
 ### String
 - is simply `java.lang.String`
 - The String is automatically converted to `scala.runtime.RichString`. This brings a few useful methods like `capitalize`, `lines`, and `reverse`.
