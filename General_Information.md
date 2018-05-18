@@ -4,7 +4,6 @@ Generela information
 - It supports an **imperative and a functional style** (it could be a blessing and a curse)
 - It is **purely object-oriented**. Scala code has to be in an object or a class.
 - **Static typing** and **type inference** (automatic type detection)
-- Scala is usually able to infer the return types of methods. There is no need to use return.
 - Typically Scala programmers create one source file for each class, or one source file for a class hierarchy. Source code is stored in text files with the extension .scala
 - Java's primitives are objects in Scala (Int, Long, Boolean)
 - There is no equivalent to Java’s static keyword, and an **object** is often used in Scala where you might use a class with static members in Java.
