@@ -14,3 +14,4 @@ Scala Types
 - **Trait** contains certain fields and methods. Methods in trait can have default implementation or override implementation.
 - **Sealed trait** - all implementations of the trait must be declared in this file
 - **Unit** is similar as void in Java. Usually a return type of Unit is a hint that the method has a side effect.
+- **Any** is the class from which all types in Scala derive.
