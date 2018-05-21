@@ -50,3 +50,12 @@ A PartialFunction must provides a method `isDefinedAt`, which allows the caller 
 - Three double quotes (`"""…"""`) for creation of String on more lines
 - String literals with expresion `val message = s "A discount of $discount% has been applied"`
 
+### Parametrized functions
+- The notation [T] signals to the compiler that the type T that follows is not some existing
+- Scala will require that the arguments be of the same type, but there is type `Any` so the call echo("hi", 5) will unfortunately work.
+```scala
+def echo[T](input1: T, input2: T) =
+  println(s"got $input1 (${input1.getClass}) $input2 (${input2.getClass})")
+```
+
+
