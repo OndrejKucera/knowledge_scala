@@ -14,3 +14,4 @@ class Car(val year: Int) {
   }	
 }
 ```
+ var, val and nothing inside of parentheses
