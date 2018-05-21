@@ -23,6 +23,9 @@ Scala Syntax
 ### Scala Classes for Java primitives:
 - Classes like `RichInt`, `RichDouble`, `RichBoolean`, and so on are called rich wrapper classes. They provide convenience methods that can be used for classes in Scala that represent the Java primitive types and String.
 
+### Type aliasing
+- You can alias the given class `type MyAlias = OldClass`
+
 ### Pattern matching
 - Works like fancy switch
 - Each case in match consist of the pattern
