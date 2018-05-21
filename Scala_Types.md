@@ -21,7 +21,17 @@ Scala is statically typed language
   - AnyVal: base for all types in Scala—for example, Int, Double, ... (map over to the primitive types in Java)
   - AnyRef: base for all reference types. It has also the methods `notify`, `wait`, and `finalize`. It directly maps to the Java `Object`.
 - **Nothing** (is everything) is a subtype of all classes in Scala. It will have no possible value.
-
+- **Option** The Option type is useful when the result of a function call may or may not exist. Instances of Option are either an instance of `scala.Some` or the object `None`.
+```scala
+val nameMaybe = request.getParameter("name")
+nameMaybe match {
+  case Some(name) =>
+    println(name.trim.toUppercase)
+  case None =>
+    println("No name value")
+}
+```
+- **Either** 
 
 ### Type Inference
 - `val greet: String = "Ahoy!"`
