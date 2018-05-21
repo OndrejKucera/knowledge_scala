@@ -24,3 +24,39 @@ class Car(val year: Int) {
 ### Exteding Class
 - Same as in Java. Only two deferences, the keyword override is required and and primary constructor can pass parameters to a base constructor.
 - `class Car(override val id: Int) extends Vehicle(id) { ... }`
+
+### Parameterized Class
+```scala
+class Message[T](val content: T) {
+  override def toString = s"message content is $content"
+}
+```
+
+### Singletons
+- It turned out that the singleton pattern is easy to understand but hard to implement in Java
+- To create a singleton use the keyword `object`
+- Singleton object can not be instantiate and therefor you can not pass parameters to the constructor.
+
+### Companion object
+- It is possible to associate a singleton to a class.
+- You have to create `class` with private constructor and the `object` with same name.
+- Companion object has ability to create instance of class without useing the `new` keyword
+
+### Static in Scala
+- There is no `static` in Scala because it would break the pure OO mode.
+- You can write the static-like method in singleton object. The `apply` method does it.
+
+### Enumerations
+- An enumeration is an object that extends the Enumeration class
+```scala
+object Currency extends Enumeration {
+  type Currency = Value
+  val CNY, GBP, INR, JPY, NOK, PLN, SEK, USD = Value	
+}
+```
+
+
+
+
+
+
