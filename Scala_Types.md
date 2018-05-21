@@ -38,3 +38,4 @@ nameMaybe match {
 - the type information is the second becuase of the name of variable is more important and the type is optional.
 - check the type of variable `greet.getClass`
 - The type has to be specified when: fileds without innitial value, parameters for function/method, return type when there is no return 
+- If there is no equal sign `=` then the type won't be inferred i.e. `def function1 { Math.sqrt(4) }`
