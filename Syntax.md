@@ -17,6 +17,7 @@ Scala Syntax
   - **public** is default
   - the **protected** means that only derived classes can access it (different from Java)
 - **foldLeft** - i.e. `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
+- Closures: creates code blocks with variables that are not bound
 
 
 
