@@ -5,14 +5,14 @@ OOP in Scala
 - Definiton of class `class Car(val year: Int) { }`
 - Creating instance `new MyObject(parameter)` of class or if it is without any parameter it can be `new MyObject`.
 - There is no need for curly braces `{ }` if the class definition has no body.
-- Constructor parameters:
+- **Constructor parameters**:
   - with `val` defines `private final` field and access method for fetching that value.
   - with `var` creates `private` field and public getter and setter for it.
   - without either of those keywords defines `private final` field for only internal use.
-- Access Modifiers: 
-  - **public** is default
-  - the **protected** means that only derived classes can access it (different from Java)
-  - **private** can be accessed only in scope of class
+- **Access modifiers**: 
+  - `public` is default
+  - the `protected` means that only derived classes can access it (different from Java)
+  - `private` can be accessed only in scope of class
 - Scala will execute as part of the primary constructor any expression or executable statement directly placed into the class definition.
 - Primary constructor can be marked as private `class Marker private(val color: String)`
 - **Abstract class** is non-createable `abstract class D { ... }`
