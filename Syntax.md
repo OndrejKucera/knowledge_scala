@@ -3,6 +3,7 @@ Scala Syntax
 
 - When you call the method the parentheses and dots are optional
 - The semicolons are optional 
+- **Function** - In Scala, function values are really objects.
 - There is no need to use **return**. Scala is usually able to infer the return types of methods.
 - Scala has **default values** for parameters (no need to do overloading)
 `def log(message: String, level: String = "INFO") = println(s"$level: $message")`
@@ -14,6 +15,7 @@ Scala Syntax
 - **Access Modifier** 
   - **public** is default
   - the **protected** means that only derived classes can access it (different from Java)
+- ***foldLeft** - i.e. `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
 
 ### Loop
 - `for ( i <- i to 3 ) { ... }`
