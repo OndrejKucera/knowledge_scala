@@ -46,6 +46,16 @@ Scala Syntax
 - It is possible passing more than one argument
 - i.e. `func(s: String*)`
 
+### Partially Applied Functions
+- The first bind a value to the date parameter. We use the `_` to leave the second parameter unbound.
+```scala
+val date = new Date(1420095600000L) 	
+val logWithDateBound = log(date, _ : String)
+logWithDateBound("message1")
+logWithDateBound("message2")
+```
+- When you create a partially applied function, Scala internally creates a new class with a special apply method.
+
 ### Partial functions
 - it is defined with `case` blocks
 ```scala
