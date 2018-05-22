@@ -7,7 +7,7 @@ The notes are not exhausted knowledge about Scala. The main resources were books
 2) [Scala types](https://github.com/OndrejKucera/knowledge_scala/blob/master/Scala_Types.md)
 3) [Syntax](https://github.com/OndrejKucera/knowledge_scala/blob/master/Syntax.md)
 4) [OOP in Scala](https://github.com/OndrejKucera/knowledge_scala/blob/master/OOP.md)
-5) [Functional paradigm](https://github.com/OndrejKucera/knowledge_scala/blob/master/Functional_Paradigm.md)
+5) [Functions](https://github.com/OndrejKucera/knowledge_scala/blob/master/Functions.md)
 6) [Scala Collections](https://github.com/OndrejKucera/knowledge_scala/blob/master/Collections.md)
 7) ...
 
