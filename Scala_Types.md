@@ -41,7 +41,8 @@ nameMaybe match {
 - If there is no equal sign `=` then the type won't be inferred i.e. `def function1 { Math.sqrt(4) }`
 
 ### Conversion
-- Scala will stop at compile time any conversions that may potentially lead to runtime failures
+- By default, the Scala compiler strictly enforces the variance.
+- Scala will stop at compile time any conversions that may potentially lead to runtime failures.
 - **Supporting covariance**:
   - `T <: Pet` indicates that the class represented by `T` is derived from `Pet`. The upper bound is defined.
 ```scala
@@ -60,5 +61,6 @@ def copyPets[S, D >: S](fromPets: Array[S], toPets: Array[D]) = { //... }
 val pets = new Array[Pet](10)
 copyPets(dogs, pets)
 ```
+- `+T` allow covariance, `-T` support contravariance
 
 
