@@ -16,8 +16,11 @@ OOP in Scala
 - Scala will execute as part of the primary constructor any expression or executable statement directly placed into the class definition.
 - Primary constructor can be marked as private `class Marker private(val color: String)`
 - **Abstract class** is non-createable `abstract class D { ... }`
-- **Extending Class** is same as in Java. There are only two deferences. The keyword `override` is required and primary constructor can pass parameters to a base constructor.
+- **Extending Class** similarly as in Java. There are only two deferences. The keyword `override` is required and primary constructor can pass parameters to a base constructor.
   - `class Car(override val id: Int) extends Vehicle(id) { ... }`
+
+#### Case class
+- It is special type of class. It is immutable and compared by value. Instance of case class can be created without `new` keyword.
 
 #### Parameterized Class (Generic)
 ```scala
