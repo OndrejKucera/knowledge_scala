@@ -12,16 +12,15 @@ Scala Syntax
 - **Implicit function** quietly transform object to object of different type. `implicit def convIntToMyObject(number: Int) = new MyObject(number)`
 - **Implicit class** Instead of creating a regular class and a separate implicit conversion method you can use class as adapter or converter.  `implicit class MyObjectHelper(val offset: Int) { ... }`
 - Polymorphic function - (kind of parametric polymorphism) It is also called **generic function**. `def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean`
-- **Access Modifier** 
-  - **public** is default
-  - the **protected** means that only derived classes can access it (different from Java)
 - **foldLeft** - i.e. `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
 - Closures: creates code blocks with variables that are not bound
+- Scala provides the convenience of initializing `var` to its default value using the underscore (default value). (Scala requires variables to be initialized before use)
 
 
-
-### Loop
-- `for ( i <- i to 3 ) { ... }`
+### Loops
+- for loop `for ( i <- i to 3 ) { ... }`
+- while loop `while (x < 5) {x += 1}`
+- do while loop `do { println(x); x += 1} while (x < 5)`
 - `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
 
 ### Operator Overloading
