@@ -16,7 +16,9 @@ Functional Paradigm
   - reduce code duplication, increase reuse, and make code concise
 - **Pure function** is without **side effects** (such as reading files or mutating memory). Pure functions are easier to test, reuse, parallelize, generalize, and reason about. Furthermore, pure functions are much less prone to bugs.
   - **Side effect** means that function does more than just return value. (i.e. `i++`)
-- **Currying** - function return function which is parameter other function def func(...)(...). One of the main reason using this is to assist with type inference.
+- **Currying**
+  - Transforms a function that takes more than one parameter into a function that takes multiple parameter lists.
+  - function return function which is parameter other function def func(...)(...). One of the main reason using this is to assist with type inference.
 - **Referential transparency** - in any program, the expression can be replaced by its result without changing the meaning of the program.
 - **Substitution model** is scheme of expression -> idea: reduce an expression to a value (as long as they have no side effects) [Alonzo Church - lambda calculus]
 
