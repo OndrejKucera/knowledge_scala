@@ -1,7 +1,7 @@
 OOP in Scala
 ==============
 
-## Class
+### Class
 - Definiton of class `class Car(val year: Int) { }`
 - Creating instance `new MyObject(parameter)` of class or if it is without any parameter it can be `new MyObject`.
 - There is no need for curly braces `{ }` if the class definition has no body.
@@ -19,14 +19,14 @@ OOP in Scala
 - **Extending Class** is same as in Java. There are only two deferences. The keyword `override` is required and primary constructor can pass parameters to a base constructor.
   - `class Car(override val id: Int) extends Vehicle(id) { ... }`
 
-### Parameterized Class (Generic)
+#### Parameterized Class (Generic)
 ```scala
 class Message[T](val content: T) {
   override def toString = s"message content is $content"
 }
 ```
 
-## Object
+### Object
 - It turned out that the **singleton pattern** is easy to understand but hard to implement in Java
 - To create a singleton use the keyword `object`
 - Singleton object can not be instantiate and therefor you can not pass parameters to the constructor.
@@ -38,7 +38,7 @@ class Message[T](val content: T) {
   - There is no `static` in Scala because it would break the pure OO mode.
   - You can write the static-like method in singleton object. The `apply` method does it.
 
-## Traits
+### Traits
 - Traits are like Java's interfaces with a partial implementation
 - Traits provide a middle ground between single and multiple inheritance
 ```scala
@@ -54,7 +54,7 @@ val angel = new Cat("Angel") with Friend
 val friend : Friend = angel
 ```
 
-## Enumerations
+### Enumerations
 - An enumeration is an object that extends the Enumeration class
 ```scala
 object Currency extends Enumeration {
