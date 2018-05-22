@@ -54,4 +54,11 @@ workWithPets(dogs) // Compilation ERROR
 def playWithPets[T <: Pet](pets: Array[T]) {}
 playWithPets(dogs) // Compilation OK
 ```
+- **Supporting contravariance**:
+```scala
+def copyPets[S, D >: S](fromPets: Array[S], toPets: Array[D]) = { //... }
+val pets = new Array[Pet](10)
+copyPets(dogs, pets)
+```
+
 
