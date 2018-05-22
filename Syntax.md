@@ -8,6 +8,8 @@ Scala Syntax
 `def log(message: String, level: String = "INFO") = println(s"$level: $message")`
 - **Tuple** is an immutable object sequence created as comma-separated values. i.e. `(1,2,3)` tuple literal (Tuple3)
 - **Implicit parameters** are always in definitons of function as last seperate column.
+- **Implicit function** quietly transform object to object of different type. `implicit def convIntToMyObject(number: Int) = new MyObject(number)`
+- **Implicit class** Instead of creating a regular class and a separate implicit conversion method you can use class as adapter or converter.  `implicit class MyObjectHelper(val offset: Int) { ... }`
 - **Polymorphic function** - (kind of parametric polymorphism) It is also called generic function. `def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean`
 - SCALA’S *==* represents value-based comparison, no matter what the type is (This is ensured by implementing == as final in the class Any)
 - `eq` method provides identity-based comparison on references
