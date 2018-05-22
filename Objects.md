@@ -1,6 +1,7 @@
 OOP in Scala
 ==============
-- Defining class
+
+### Defining class
 ```scala
 class Car(val year: Int) {
   private var milesDriven: Int = 0
@@ -46,6 +47,16 @@ class Message[T](val content: T) {
 - There is no `static` in Scala because it would break the pure OO mode.
 - You can write the static-like method in singleton object. The `apply` method does it.
 
+### Traits
+- Traits are like interfaces with a partial implementation
+- Traits provide a middle ground between single and multiple inheritance
+```scala
+trait Friend {
+  val name: String // abstract
+  def listen() = println(s"Your friend $name is listening")	
+}
+```
+
 ### Enumerations
 - An enumeration is an object that extends the Enumeration class
 ```scala
@@ -54,9 +65,3 @@ object Currency extends Enumeration {
   val CNY, GBP, INR, JPY, NOK, PLN, SEK, USD = Value	
 }
 ```
-
-
-
-
-
-
