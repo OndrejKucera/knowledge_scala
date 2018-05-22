@@ -7,7 +7,7 @@ Scala is statically typed language
 - **Variables** are like values, except you can re-assign them (mutability)
 - **Blocks** are expressions by surrounding `{ }`. Last expression in the block is the result.
 - **Functions** are expressions that take parameters. Anonymous function `(x: Int) => x + 1`. You can name it `val fun = ( ) => println(“hello”)`. It can have zero or multiple parameters. Recursive function needs return type in scala. When we define a function literal, what is actually being defined in Scala is an object with a method called apply
-- **Methods** are defined with def. def is followed by a name, parameter lists, a return type, and a body. Methods can take multiple parameter lists.
+- **Methods** are defined with `def`. That is followed by a name, parameter lists, a return type, and a body. Methods can take multiple parameter lists.
 - [**Class**](https://github.com/OndrejKucera/knowledge_scala/blob/master/OOP.md#class) defines with the keyword `class` followed by its name and constructor parameters. The instance of class can be created with the `new` keyword. Classes in Scala cannot have static members. You can use objects to achieve similar functionality as with static members in Java.
 - [**Object**](https://github.com/OndrejKucera/knowledge_scala/blob/master/OOP.md#object) is single instances of its own definition. It is singleton `object`, which simultaneously declares also class and it’s only instance. (like new instance of an anonymous class in Java)
 - [**Trait**](https://github.com/OndrejKucera/knowledge_scala/blob/master/OOP.md#traits) contains certain fields and methods. Methods in `trait` can have default implementation or override implementation.
@@ -15,20 +15,11 @@ Scala is statically typed language
 ### Fundamental types
 - **Unit** is similar as void in Java. Usually a return type of Unit is a hint that the method has a side effect.
 - **Any** is the class from which all types in Scala derive (super class of all types). Is abstract class with these methods: `!=`, `==`, `asInstanceOf`, `equals`, `hashCode`, `isInstanceOf`, and `toString`.
-  - AnyVal: base for all types in Scala—for example, Int, Double, ... (map over to the primitive types in Java)
+  - AnyVal: base for all types in Scala, for example, Int, Double, ... (map over to the primitive types in Java)
   - AnyRef: base for all reference types. It has also the methods `notify`, `wait`, and `finalize`. It directly maps to the Java `Object`.
 - **Nothing** (is everything) is a subtype of all classes in Scala. It will have no possible value.
 - **Option** The Option type is useful when the result of a function call may or may not exist. Instances of Option are either an instance of `scala.Some` or the object `None`.
-```scala
-val nameMaybe = request.getParameter("name")
-nameMaybe match {
-  case Some(name) =>
-    println(name.trim.toUppercase)
-  case None =>
-    println("No name value")
-}
-```
-- **Either** 
+- **Either** - ???
 
 ### Type Inference
 - `val greet: String = "Ahoy!"`
