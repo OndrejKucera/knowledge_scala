@@ -41,13 +41,15 @@ class Message[T](val content: T) {
 ### Traits
 - Traits are like Java's interfaces with a partial implementation
 - Traits provide a middle ground between single and multiple inheritance
+- It contains certain fields and methods. Methods in trait can have default or overridden implementation.
+- **Sealed trait** - all implementations of the trait must be declared in this file
+- Trait's constructor cannot take any parameters
 ```scala
 trait Friend {
   val name: String // abstract
   def listen() = println(s"Your friend $name is listening")	
 }
 ```
-- Trait's constructor cannot take any parameters
 - **Selective Mixins** : 
 ```scala
 val angel = new Cat("Angel") with Friend 	
