@@ -8,7 +8,6 @@ Scala Syntax
 - Scala has **default values** for parameters (no need to do overloading)
 `def log(message: String, level: String = "INFO") = println(s"$level: $message")`
 - Scala provides the notation `_`, the underscore, to represent parameters of a function value. `val total = (0 /: arr) { _ + _ }`
-- **Tuple** is an immutable object sequence created as comma-separated values. i.e. `(1,2,3)` tuple literal (Tuple3)
 - **Implicit parameters** are always in definitons of function as last seperate column.
 - **Implicit function** quietly transform object to object of different type. `implicit def convIntToMyObject(number: Int) = new MyObject(number)`
 - **Implicit class** Instead of creating a regular class and a separate implicit conversion method you can use class as adapter or converter.  `implicit class MyObjectHelper(val offset: Int) { ... }`
