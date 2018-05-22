@@ -12,7 +12,6 @@ Generela information
 - Classes and methods are **public** by default, so you don’t explicitly use the keyword public.
 - Scala, by default, imports `java.lang`, `scala`, `scala.Predef`
 - Scala has the same compilation model (separate compilation, dynamic class loading) like Java and allows access to thousands of existing high-quality libraries.
-- **scalac** - compiles Scala code into Java Bytecode
 
 ### Scala on the Command Line
 - Even though we don’t explicitly invoke the compiler when using the scala command, the code goes through rigorous compilation and type checking. The scala tool compiles the given script into bytecode in memory and then executes it.
@@ -24,5 +23,6 @@ println("Hello " + args(0))
 ```
 
 ### Compiling Scala:
+- **scalac** - compiles Scala code into Java Bytecode
 - `scalac Sample.scala`
 - run it using either the `scala` tool or the `java` command
