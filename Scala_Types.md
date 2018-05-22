@@ -39,3 +39,19 @@ nameMaybe match {
 - check the type of variable `greet.getClass`
 - The type has to be specified when: fileds without innitial value, parameters for function/method, return type when there is no return 
 - If there is no equal sign `=` then the type won't be inferred i.e. `def function1 { Math.sqrt(4) }`
+
+### Conversion
+- Scala will stop at compile time any conversions that may potentially lead to runtime failures
+- **Supporting covariance**:
+  - `T <: Pet` indicates that the class represented by `T` is derived from `Pet`. The upper bound is defined.
+```scala
+class Dog(override val name: String) extends Pet(name)
+
+def workWithPets(pets: Array[Pet]) {}
+val dogs = Array(new Dog("Rover"), new Dog("Comet"))
+workWithPets(dogs) // Compilation ERROR
+
+def playWithPets[T <: Pet](pets: Array[T]) {}
+playWithPets(dogs) // Compilation OK
+```
+
