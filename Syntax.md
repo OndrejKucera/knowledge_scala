@@ -15,6 +15,8 @@ Scala Syntax
 - **foldLeft** - i.e. `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
 - Closures: creates code blocks with variables that are not bound
 - Scala provides the convenience of initializing `var` to its default value using the underscore (default value). (Scala requires variables to be initialized before use)
+- If all **recursive calls** made by a function are in **tail position**, Scala automatically compiles the recursion to iterative loops that don’t consume call stack frames for each iteration. (@annotation.tailrec)
+- The left of the arrow ( `<-` ) defines a val
 
 
 ### Loops
