@@ -56,6 +56,12 @@ trait Friend {
   def listen() = println(s"Your friend $name is listening")	
 }
 ```
+- Trait's constructor cannot take any parameters
+- **Selective Mixins** : 
+```scala
+val angel = new Cat("Angel") with Friend 	
+val friend : Friend = angel
+```
 
 ### Enumerations
 - An enumeration is an object that extends the Enumeration class
