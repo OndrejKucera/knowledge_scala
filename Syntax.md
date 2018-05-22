@@ -15,7 +15,7 @@ Scala Syntax
 - **Access Modifier** 
   - **public** is default
   - the **protected** means that only derived classes can access it (different from Java)
-- ***foldLeft** - i.e. `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
+- **foldLeft** - i.e. `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
 
 ### Loop
 - `for ( i <- i to 3 ) { ... }`
