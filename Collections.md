@@ -31,13 +31,13 @@ Scala-specific Collections
 - There are also methods `filter`, `forall`, `exists`, `map`,
 - The method `/:` is equivalent to `foldLeft` and `\:` to `foldRight`
 
-### Methods
+### Seq
+- ???
+
+### Methods of Collesctions
 - foldLeft - `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
 - foreach - `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
 - ... Lets read: https://docs.scala-lang.org/overviews/collections/overview.html
-
-### Seq
-- ???
 
 ### Tuple
 - It is not in `scala.collection.immutable.` package
