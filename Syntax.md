@@ -1,16 +1,21 @@
 Scala Syntax
 ==============
 
+- The semicolons `;` are optional
 - When you call the method the parentheses and dots are optional
-- The semicolons are optional 
 - Scala provides the notation `_`, the underscore, to represent parameters of a function value.
   - `val total = (0 /: arr) { _ + _ }`
 - Scala provides the convenience of initializing `var` to its default value using the underscore (default value). (Scala requires variables to be initialized before use)
 - The left of the arrow `<-` defines a val
 - If a method name ends with a colon `:`, then the target of the call is the instance that follows the operator.
-- **Boolean expressions** are same as a Java’s `&&` and `||`, do not always need their right operand to be evaluated.
-- **Implicit class** Instead of creating a regular class and a separate implicit conversion method you can use class as adapter or converter.
-  - `implicit class MyObjectHelper(val offset: Int) { ... }`
+- Operator overloading, Scala has no operators, so an operator overloading means overloading a method etc. +, ...
+- **Type** aliasing `type MyAlias = OldClass`
+
+### String
+- is simply `java.lang.String`
+- The String is automatically converted to `scala.runtime.RichString`. This brings a few useful methods like `capitalize`, `lines`, and `reverse`.
+- Three double quotes (`"""…"""`) for creation of String on more lines
+- String literals with expresion `val message = s "A discount of $discount% has been applied"`
 
 ### Loops
 - **for expression**:
@@ -24,57 +29,6 @@ for([pattern <- generator; definition*]+; filter*)
 ```
 - **while** loop `while (x < 5) {x += 1}`
 - **do while** loop `do { println(x); x += 1} while (x < 5)`
-
-### Operator Overloading
-- Scala has no operators, so operator overloading means overloading symbols like +, etc.
-
-### Scala Classes for Java primitives:
-- Classes like `RichInt`, `RichDouble`, `RichBoolean`, and so on are called rich wrapper classes. They provide convenience methods that can be used for classes in Scala that represent the Java primitive types and String.
-
-### Type aliasing
-- You can alias the given class `type MyAlias = OldClass`
-
-### Comparing
-- SCALA’S *==* represents value-based comparison, no matter what the type is (This is ensured by implementing == as final in the class Any)
-- `eq` method provides identity-based comparison on references
-
-### Variadic function
-- Little syntactic sugar for creating and passing a `Seq` of elements explicitly
-- It is possible passing more than one argument
-- i.e. `func(s: String*)`
-
-### Partially Applied Functions
-- The first bind a value to the date parameter. We use the `_` to leave the second parameter unbound.
-```scala
-val date = new Date(1420095600000L) 	
-val logWithDateBound = log(date, _ : String)
-logWithDateBound("message1")
-logWithDateBound("message2")
-```
-- When you create a partially applied function, Scala internally creates a new class with a special apply method.
-
-### Partial functions
-- it is defined with `case` blocks
-```scala
-scala> List(41, "cat") collect { case i: Int ⇒ i + 1 }
-res1: List[Int] = List(42)
-```
-- Scala has built-in support for partial functions thanks to the `PartialFunction` trait
-A PartialFunction must provides a method `isDefinedAt`, which allows the caller of the partial function to know, beforehand, whether the function can return a result for a given input value.
-
-### Parametrized functions
-- The notation [T] signals to the compiler that the type T that follows is not some existing
-- Scala will require that the arguments be of the same type, but there is type `Any` so the call echo("hi", 5) will unfortunately work.
-```scala
-def echo[T](input1: T, input2: T) =
-  println(s"got $input1 (${input1.getClass}) $input2 (${input2.getClass})")
-```
-
-### String
-- is simply `java.lang.String`
-- The String is automatically converted to `scala.runtime.RichString`. This brings a few useful methods like `capitalize`, `lines`, and `reverse`.
-- Three double quotes (`"""…"""`) for creation of String on more lines
-- String literals with expresion `val message = s "A discount of $discount% has been applied"`
 
 ### Exceptions
 - Scala doesn't force you to check exception that you are not care about. Those you don’t handle are propagated automatically
