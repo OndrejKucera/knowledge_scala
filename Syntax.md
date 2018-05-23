@@ -3,22 +3,14 @@ Scala Syntax
 
 - When you call the method the parentheses and dots are optional
 - The semicolons are optional 
-- **Function** - In Scala, function values are really objects.
-- There is no need to use **return**. Scala is usually able to infer the return types of methods.
-- Scala has **default values** for parameters (no need to do overloading)
-`def log(message: String, level: String = "INFO") = println(s"$level: $message")`
-- Scala provides the notation `_`, the underscore, to represent parameters of a function value. `val total = (0 /: arr) { _ + _ }`
-- **Implicit parameters** are always in definitons of function as last seperate column.
-- **Implicit function** quietly transform object to object of different type. `implicit def convIntToMyObject(number: Int) = new MyObject(number)`
-- **Implicit class** Instead of creating a regular class and a separate implicit conversion method you can use class as adapter or converter.  `implicit class MyObjectHelper(val offset: Int) { ... }`
-- Polymorphic function - (kind of parametric polymorphism) It is also called **generic function**. `def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean`
-- **foldLeft** - i.e. `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
-- Closures: creates code blocks with variables that are not bound
+- Scala provides the notation `_`, the underscore, to represent parameters of a function value.
+  - `val total = (0 /: arr) { _ + _ }`
 - Scala provides the convenience of initializing `var` to its default value using the underscore (default value). (Scala requires variables to be initialized before use)
-- If all **recursive calls** made by a function are in **tail position**, Scala automatically compiles the recursion to iterative loops that don’t consume call stack frames for each iteration. (@annotation.tailrec)
 - The left of the arrow `<-` defines a val
 - If a method name ends with a colon `:`, then the target of the call is the instance that follows the operator.
-
+- **Boolean expressions** are same as a Java’s `&&` and `||`, do not always need their right operand to be evaluated.
+- **Implicit class** Instead of creating a regular class and a separate implicit conversion method you can use class as adapter or converter.
+  - `implicit class MyObjectHelper(val offset: Int) { ... }`
 
 ### Loops
 - **for expression**:
