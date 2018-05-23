@@ -26,6 +26,7 @@ def activity(day: DayOfWeek.Value) {
   - `case msg : Int if (msg > 1000000) => ...` 
 - **Matching using extractors**:
   - The extractor has one method named `unapply` (breaks down the object into pieces that match a pattern)
+  - The extractor can also return one or more values
 ```scala
 object StockService {
   def process(input : String) {
