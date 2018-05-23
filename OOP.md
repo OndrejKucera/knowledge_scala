@@ -3,8 +3,8 @@ OOP in Scala
 
 ### Class
 - Definiton of class `class Car(val year: Int) { }`
-- Creating instance `new MyObject(parameter)` of class or if it is without any parameter it can be `new MyObject`.
 - There is no need for curly braces `{ }` if the class definition has no body.
+- Creating instance `new MyObject(parameter)` of class or if it is without any parameter it can be `new MyObject`.
 - **Constructor parameters**:
   - with `val` defines `private final` field and access method for fetching that value.
   - with `var` creates `private` field and public getter and setter for it.
@@ -20,9 +20,7 @@ OOP in Scala
   - `class Car(override val id: Int) extends Vehicle(id) { ... }`
 - **Implicit class** Instead of creating a regular class and a separate implicit conversion method you can use class as adapter or converter.
   - `implicit class MyObjectHelper(val offset: Int) { ... }`
-
-#### Case class
-- It is special type of class. It is immutable and compared by value. Instance of case class can be created without `new` keyword.
+- **Case class** It is special type of class. It is immutable and compared by value. Instance of case class can be created without `new` keyword.
 
 #### Parameterized Class (Generic)
 ```scala
