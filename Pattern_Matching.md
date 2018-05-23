@@ -1,7 +1,6 @@
 Pattern Matching
 =======================
 - Fancy (Java's) switch :-)
-
 ```scala
 def activity(day: DayOfWeek.Value) {
   day match {
@@ -11,8 +10,9 @@ def activity(day: DayOfWeek.Value) {
   }	
 }
 ```
+
 - You can directly match against literals and constants
-- the wildcard, represented by an underscore `_`, handle the rest of the cases.
+- The wildcard, represented by an underscore `_`, handle the rest of the cases.
 - If the value doesn't match with anything then the `MatchError` exception will be thrown.
 - The order of multiple case expressions matters!
 - Any variable or constant with the same noncapitalized name in the scope will be ignored. Therefor use `case this.max => ...`
@@ -45,7 +45,7 @@ object Symbol {
 }
 ```
 
-### Regular expression
+### Regular Expression
 - `Regex` class in `scala.util.matching` package
 - creating the regex in Scala `val pattern = "(S|s)cala".r`
 - To find a first match of the regular expression, simply call the `findFirstIn` method or all occurrences `findAllIn`
