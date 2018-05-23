@@ -12,10 +12,13 @@ Scala is statically typed language
 - [**Object**](https://github.com/OndrejKucera/knowledge_scala/blob/master/OOP.md#object) is single instances of its own definition. It is singleton `object`, which simultaneously declares also class and it’s only instance. (like new instance of an anonymous class in Java)
 - [**Trait**](https://github.com/OndrejKucera/knowledge_scala/blob/master/OOP.md#traits) contains certain fields and methods. Methods in `trait` can have default implementation or override implementation.
 
+- **boolean expressions** are same as a Java’s `&&` and `||`, do not always need their right operand to be evaluated.
+
+
 ### Fundamental types
 - **Unit** is similar as void in Java. Usually a return type of Unit is a hint that the method has a side effect.
 - **Any** is the class from which all types in Scala derive (super class of all types). Is abstract class with these methods: `!=`, `==`, `asInstanceOf`, `equals`, `hashCode`, `isInstanceOf`, and `toString`.
-  - AnyVal: base for all types in Scala, for example, Int, Double, ... (map over to the primitive types in Java)
+  - AnyVal: base for all types in Scala (Int, Long, Double, Float, Char, Short, Byte, Boolean, Unit). All primitives are objects.
   - AnyRef: base for all reference types. It has also the methods `notify`, `wait`, and `finalize`. It directly maps to the Java `Object`.
 - **Nothing** (is everything) is a subtype of all classes in Scala. It will have no possible value.
 - **Option** The Option type is useful when the result of a function call may or may not exist. Instances of Option are either an instance of `scala.Some` or the object `None`.
