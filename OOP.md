@@ -18,6 +18,8 @@ OOP in Scala
 - **Abstract class** is non-createable `abstract class D { ... }`
 - **Extending Class** similarly as in Java. There are only two deferences. The keyword `override` is required and primary constructor can pass parameters to a base constructor.
   - `class Car(override val id: Int) extends Vehicle(id) { ... }`
+- **Implicit class** Instead of creating a regular class and a separate implicit conversion method you can use class as adapter or converter.
+  - `implicit class MyObjectHelper(val offset: Int) { ... }`
 
 #### Case class
 - It is special type of class. It is immutable and compared by value. Instance of case class can be created without `new` keyword.
