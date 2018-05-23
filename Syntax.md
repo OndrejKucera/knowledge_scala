@@ -88,4 +88,5 @@ def echo[T](input1: T, input2: T) =
 - Three double quotes (`"""…"""`) for creation of String on more lines
 - String literals with expresion `val message = s "A discount of $discount% has been applied"`
 
-
+### Exceptions
+- 
