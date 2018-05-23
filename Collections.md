@@ -33,7 +33,9 @@ Lets read: https://docs.scala-lang.org/overviews/collections/overview.html
 - There are also methods `filter`, `forall`, `exists`, `map`,
 - The method `/:` is equivalent to `foldLeft` and `\:` to `foldRight`
 
-- `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
+### Methods
+- foldLeft - `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
+- foreach - `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
 
 ### Seq
 - ???
