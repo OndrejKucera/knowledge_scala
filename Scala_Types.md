@@ -28,7 +28,6 @@ Scala is statically typed language
 
 ### Comparison
 - Scala’s `==` represents value-based comparison, no matter what the type is (This is ensured by implementing `==` as final in the class `Any`)
-- Boolean expressions are same as a Java’s `&&` and `||`, do not always need their right operand to be evaluated.
 - `eq` method provides identity-based comparison on references
 
 ### Type Inference
