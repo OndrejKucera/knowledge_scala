@@ -21,8 +21,7 @@ OOP in Scala
 - **Implicit class** Instead of creating a regular class and a separate implicit conversion method you can use class as adapter or converter.
   - `implicit class MyObjectHelper(val offset: Int) { ... }`
 - **Case class** It is special type of class. It is immutable and compared by value. Instance of case class can be created without `new` keyword.
-
-#### Parameterized Class (Generic)
+- **Parameterized (generic) class**
 ```scala
 class Message[T](val content: T) {
   override def toString = s"message content is $content"
