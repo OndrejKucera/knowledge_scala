@@ -2,8 +2,6 @@ Scala-specific Collections
 ==============
 (Of course you can still use the collections from the JDK such as ArrayList, HashSet, and simple arrays)
 
-Lets read: https://docs.scala-lang.org/overviews/collections/overview.html
-
 - Scala favors immutable collection (`scala.collection.immutable.`), even though mutable versions are avaliable too (`scala.collection.mutable`).
 - If you don’t mention a package name, then, by default, Scala brings on board immutable collections. Because the object Predef (included by default) provides aliases for Set and Map to point to the immutable implementations.
 - Immutable collections are thread safe, free from side effects, and help with program correctness.
@@ -36,6 +34,7 @@ Lets read: https://docs.scala-lang.org/overviews/collections/overview.html
 ### Methods
 - foldLeft - `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
 - foreach - `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
+- ... Lets read: https://docs.scala-lang.org/overviews/collections/overview.html
 
 ### Seq
 - ???
