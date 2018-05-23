@@ -26,6 +26,11 @@ Scala is statically typed language
 - **Option** The Option type is useful when the result of a function call may or may not exist. Instances of Option are either an instance of `scala.Some` or the object `None`.
 - **Either** - ...
 
+### Comparison
+- Scala’s `==` represents value-based comparison, no matter what the type is (This is ensured by implementing `==` as final in the class `Any`)
+- Boolean expressions are same as a Java’s `&&` and `||`, do not always need their right operand to be evaluated.
+- `eq` method provides identity-based comparison on references
+
 ### Type Inference
 - Types of values can be inferred, but you can also explicitly state the type.
 - `val greet: String = "Ahoy!"`
