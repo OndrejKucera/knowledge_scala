@@ -5,7 +5,7 @@ Generela information
 - It is **purely object-oriented**. Scala code has to be in an object or a class.
 - **Static typing** and **type inference** (automatic type detection)
 - Typically Scala programmers create one source file for each class, or one source file for a class hierarchy. Source code is stored in text files with the extension .scala
-- Java's primitives are objects in Scala (Int, Long, Boolean)
+- Java's primitives are objects in Scala (`AnyVal` -> Int, Long, Double, Float, Char, Short, Byte, Boolean, Unit)
 - There is no equivalent to Java’s static keyword, and an `object` is often used in Scala where you might use a class with static members in Java.
 - **boolean expressions** are same as a Java’s `&&` and `||`, do not always need their right operand to be evaluated.
 - **method main** has to has specific signature. It has to take an Array of Strings as its argument, and its return type must be Unit. When you run a program, Scala will look for a method named main. Main method is entry point for program, which JVM requires.
