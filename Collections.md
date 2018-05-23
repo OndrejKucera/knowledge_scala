@@ -8,6 +8,7 @@ Scala-specific Collections
 - The ability to create an object without `new` is because of a special `apply` method, also called a factory method. `Set(1, 2, 4)`
 
 ### Set
+- `HashSet`, `TreeSet`, `BitSet`, `ListSet`
 - Set holds an element at most once and it is an unordered collection. 
 - Scala optimizes the implementation of Set for smaller values, and creates an implementation of HashSet for values higher than 4.
 - merging two Sets by `val mergedFeeds = feeds1 ++ feeds2`
@@ -15,12 +16,14 @@ Scala-specific Collections
 - there are also methods `map`, `filter`, `foreach`, ...
 
 ### Map
+- `HashMap`, `TreeMap`, `ListMap`
 - It is a dictionary of key-value pairs.
 - To get a feed for a person, simply use the `get` method. The return type of `get` is `Option[T]`.
 - To add a feed, use the `updated` method. It has no effect on the original Map.
 - There are also methods `filterKey`, `filter`, ...
 
 ### List
+- Is subclass of `Seq` -> `LinearSeq` -> `List`
 - It is an ordered collection of objects
 - The most operations on the list are structured around operations on the `head` and `tail`.
 - The accesing the second element `val element = list(1)`
@@ -28,7 +31,13 @@ Scala-specific Collections
 - There are also methods `filter`, `forall`, `exists`, `map`,
 - The method `/:` is equivalent to `foldLeft` and `\:` to `foldRight`
 
+- `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
+
+### Seq
+- ???
+
 ### Tuple
+- It is not in `scala.collection.immutable.` package
 - Tuple is the collection class in Scala which can hold multiple values with same or different types together.
 - It is an immutable object sequence created as comma-separated values. i.e. `(1,2,3)` tuple literal (Tuple3)
 - `var (x,y,z) = (1,2,3)` tuple unpacking via pattern matching.
