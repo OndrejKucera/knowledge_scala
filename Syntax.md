@@ -8,7 +8,8 @@ Scala Syntax
 - Scala provides the convenience of initializing `var` to its default value using the underscore (default value). (Scala requires variables to be initialized before use)
 - The left of the arrow `<-` defines a val
 - If a method name ends with a colon `:`, then the target of the call is the instance that follows the operator.
-- Operator overloading, Scala has no operators, so an operator overloading means overloading a method etc. +, ...
+- Operator overloading - Scala has no operators, so an operator overloading means overloading a method etc. +, ...
+- Short-circuit evaluation - Boolean expressions are same as a Java’s `&&` and `||`, do not always need their right operand to be evaluated.
 - **Type** aliasing `type MyAlias = OldClass`
 
 ### String
