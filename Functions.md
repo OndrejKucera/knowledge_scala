@@ -8,13 +8,7 @@ Functions
 - **Implicit parameters** are always in definitons of function as last seperate column.
 - **Implicit function** quietly transform object to object of different type.
   - `implicit def convIntToMyObject(number: Int) = new MyObject(number)`
-- Polymorphic function - (kind of parametric polymorphism) It is also called **generic function**.
-  - `def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean`
 - **Closure** creates code blocks with variables that are not bound to function.
-
-### ??
-
-
 
 ### Evaluation strategy
 - We can change the evaluating strategy: from call-by-value to call-by-name
@@ -31,4 +25,33 @@ Functions
 - **Tail Call Optimization**
   - Scala automatically compiles the recursion to iterative loops that don’t consume call stack frames for each iteration and avoids the stack-overflow. (@annotation.tailrec)
 - `def loop: Boolean = loop`, is going to be evaluated always and only once
-- `val loop: Boolean = loop`, is going to be evaluated immediately and **won’t terminate**  
+- `val loop: Boolean = loop`, is going to be evaluated immediately and **won’t terminate**
+
+## Partially Applied Function
+- The first bind a value to the date parameter. We use the `_` to leave the second parameter unbound.
+```scala
+val date = new Date(1420095600000L) 	
+val logWithDateBound = log(date, _ : String)
+logWithDateBound("message1")
+logWithDateBound("message2")
+```
+- When you create a partially applied function, Scala internally creates a new class with a special apply method.
+
+### Parametrized (Generic) Functions
+- The notation `[T]` signals to the compiler that the type `T` that follows is not some existing
+- Scala will require that the arguments be of the same type, but there is type `Any` so the call `echo("hi", 5)` will unfortunately work.
+  - `def echo[T](input1: T, input2: T) = println(s"got $input1 (${input1.getClass}) $input2 (${input2.getClass})")`
+  - `def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean`
+
+### Partial Function
+- It is defined with `case` blocks
+```scala
+scala> List(41, "cat") collect { case i: Int ⇒ i + 1 }
+res1: List[Int] = List(42)
+```
+- Scala has built-in support for partial functions thanks to the `PartialFunction` trait. A `PartialFunction` must provides a method `isDefinedAt`, which allows the caller of the partial function to know, beforehand, whether the function can return a result for a given input value.
+
+### Variadic Function
+- Little syntactic sugar for creating and passing a Seq of elements explicitly
+- It is possible passing more than one argument
+- i.e. func(s: String*)
