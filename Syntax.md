@@ -42,10 +42,6 @@ for([pattern <- generator; definition*]+; filter*)
 ### Type aliasing
 - You can alias the given class `type MyAlias = OldClass`
 
-### Pattern matching
-- Works like fancy switch
-- Each case in match consist of the pattern
-
 ### Comparing
 - SCALA’S *==* represents value-based comparison, no matter what the type is (This is ensured by implementing == as final in the class Any)
 - `eq` method provides identity-based comparison on references
