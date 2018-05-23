@@ -24,6 +24,9 @@ Functions
 - Recursive function needs return type in scala. 
 - **Tail Call Optimization**
   - Scala automatically compiles the recursion to iterative loops that don’t consume call stack frames for each iteration and avoids the stack-overflow. (@annotation.tailrec)
+- **Trampoline Calls**
+  - Scala compiler only detects direct recursions. If two functions call each other, Scala doesn't detec anything.
+  - In cases like this where the recursion involves functions calling each other, we can use the `TailRec` class and the functions available in the `scala.util.control.TailCalls` package.
 - `def loop: Boolean = loop`, is going to be evaluated always and only once
 - `val loop: Boolean = loop`, is going to be evaluated immediately and **won’t terminate**
 
