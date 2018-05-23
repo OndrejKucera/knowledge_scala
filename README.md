@@ -9,7 +9,9 @@ Note: The notes are not exhausted knowledge about Scala.
 4) [OOP in Scala](https://github.com/OndrejKucera/knowledge_scala/blob/master/OOP.md)
 5) [Functions](https://github.com/OndrejKucera/knowledge_scala/blob/master/Functions.md)
 6) [Scala Collections](https://github.com/OndrejKucera/knowledge_scala/blob/master/Collections.md)
-7) [Pattern Matching]((https://github.com/OndrejKucera/knowledge_scala/blob/master/Pattern_Matching.md))
+7) [Pattern Matching](https://github.com/OndrejKucera/knowledge_scala/blob/master/Pattern_Matching.md)
+8)
+
 ...
 Still in progress
 
