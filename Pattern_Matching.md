@@ -45,4 +45,7 @@ object Symbol {
 ```
 
 ### Regular expression
-- 
+- `Regex` class in `scala.util.matching` package
+- creating the regex in Scala `val pattern = "(S|s)cala".r`
+- To find a first match of the regular expression, simply call the `findFirstIn` method or all occurrences `findAllIn`
+- Scala regular expressions are extractors, so you can use them in matchers
