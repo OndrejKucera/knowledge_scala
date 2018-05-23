@@ -13,3 +13,5 @@ Functions
 - `def loop: Boolean = loop`, is going to be evaluated always
 - `val loop: Boolean = loop`, is going to be evaluated immediately and won’t terminate
 
+### Recursion
+- 
