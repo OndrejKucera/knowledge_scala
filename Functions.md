@@ -10,7 +10,7 @@ Functions
   - `implicit def convIntToMyObject(number: Int) = new MyObject(number)`
 - **Closure** creates code blocks with variables that are not bound to function.
 
-### Evaluation strategy
+### Evaluation Strategy
 - We can change the evaluating strategy: from call-by-value to call-by-name
 - Both evaluations reduce to the same final values but only if the function is pure and evaluations terminate.
 - **Call-by-value** has advantage that it evaluates every function argument only once
