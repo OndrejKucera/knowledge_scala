@@ -1,5 +1,6 @@
 Pattern Matching
 =======================
+- Fancy (Java's) switch :-)
 
 ```scala
 def activity(day: DayOfWeek.Value) {
