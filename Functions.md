@@ -15,7 +15,7 @@ Functions
 ### Recursion
 - It is solving a problem thanks to subproblems.
 - The recursion can cause stack overflow for large input values.
-- Function has to have specified return-type
+- Recursive function needs return type in scala. 
 - **Tail Call Optimization**
   - tail recursions - are converted into iterations as a way to avoid the stack overflow issue
 - `def loop: Boolean = loop`, is going to be evaluated always and only once
