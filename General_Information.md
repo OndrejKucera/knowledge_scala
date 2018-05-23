@@ -15,7 +15,7 @@ Generela information
 
 ### Imperative paradigm
 - You tell not only what to do, but also how to do it. That’s dictating a low level of details.
-- mutable variables, assignments, control structure (ifs, loops, returns, breaks, …) -> von Neumann style (John Backus) -> bottleneck -> extensibility
+- mutable variables, assignments, control structure (ifs, loops, returns, breaks, …) -> von Neumann style (John Backus) -> bottleneck -> poor extensibility
 
 ### Functional paradigm
 - First functional language was Lisp in 1959
