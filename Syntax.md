@@ -89,4 +89,17 @@ def echo[T](input1: T, input2: T) =
 - String literals with expresion `val message = s "A discount of $discount% has been applied"`
 
 ### Exceptions
+- Scala doesn't force you to check exception that you are not care about. Those you don’t handle are propagated automatically
+- Scala treats all exceptions as if they’re unchecked! :-)
+- example of thrown `IllegalArgumentException`
+- you can use try-catch as in Java but the syntax of catch is quite different in Scala
+```scala
+try {
+  ....	
+}
+catch {
+  case ex: IllegalArgumentException => ...	
+  case ex: RuntimeException => ...
+}
+```
 - 
