@@ -1,4 +1,4 @@
-Generela information
+Generela Information
 ====================
 - Scala 1.1.1 (2004); 2.0 (2006)
 - It supports an **imperative and a functional style** (it could be a blessing and a curse)
@@ -11,11 +11,11 @@ Generela information
 - Scala, by default, imports `java.lang`, `scala`, `scala.Predef`
 - Scala has the same compilation model (separate compilation, dynamic class loading) like Java and allows access to thousands of existing high-quality libraries.
 
-### Imperative paradigm
+### Imperative Paradigm
 - You tell not only what to do, but also how to do it. That’s dictating a low level of details.
 - Mutable variables, assignments, control structure (ifs, loops, returns, breaks, …) -> von Neumann style (John Backus) -> bottleneck -> poor extensibility
 
-### Functional paradigm
+### Functional Paradigm
 - First functional language was Lisp in 1959
 - Functional programming honors **immutability** and favors **higher-order functions** and **function composition**
 - Two way of functional languages:
