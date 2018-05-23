@@ -2,11 +2,31 @@ Scala-specific Collections
 ==============
 (Of course you can still use the collections from the JDK such as ArrayList, HashSet, and simple arrays)
 
-### List
+- Scala favors immutable collection (`scala.collection.immutable.`), even though mutable versions are avaliable too (`scala.collection.mutable`).
+- If you don’t mention a package name, then, by default, Scala brings on board immutable collections. Because the object Predef (included by default) provides aliases for Set and Map to point to the immutable implementations.
+- Immutable collections are thread safe, free from side effects, and help with program correctness.
+- The ability to create an object without `new` is because of a special `apply` method, also called a factory method. `Set(1, 2, 4)`
 
 ### Set
+- Set holds an element at most once and it is an unordered collection. 
+- Scala optimizes the implementation of Set for smaller values, and creates an implementation of HashSet for values higher than 4.
+- merging two Sets by `val mergedFeeds = feeds1 ++ feeds2`
+- intersect operation `val commonFeeds = feeds1 & feeds2`
+- there are also methods `map`, `filter`, `foreach`, ...
 
 ### Map
+- It is a dictionary of key-value pairs.
+- To get a feed for a person, simply use the `get` method. The return type of `get` is `Option[T]`.
+- To add a feed, use the `updated` method. It has no effect on the original Map.
+- There are also methods `filterKey`, `filter`, ...
+
+### List
+- It is an ordered collection of objects
+- The most operations on the list are structured around operations on the `head` and `tail`.
+- The accesing the second element `val element = list(1)`
+- Add element on the begining `val prefixedList = "newElement" :: feeds`
+- There are also methods `filter`, `forall`, `exists`, `map`,
+- The method `/:` is equivalent to `foldLeft` and `\:` to `foldRight`
 
 ### Tuple
 - Tuple is the collection class in Scala which can hold multiple values with same or different types together.
