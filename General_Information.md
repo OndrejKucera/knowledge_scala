@@ -19,11 +19,11 @@ Generela information
 
 ### Functional paradigm
 - First functional language was Lisp in 1959
+- Functional programming honors **immutability** and favors **higher-order functions** and **function composition**
 - Two way of FP:
-  - Restricted fp: without mutable variables, assignments, loops and other imperatives structures (Pure Lisp, XPath)
+  - Restricted: without mutable variables, assignments, loops and other imperatives structures (Pure Lisp, XPath)
   - Wider sense: focusing on the functions. **Functions are first-class citizens**. Function can be defined anywhere, function can be passed and returned as a value, functions can be composed by set of operators.
 - Why is FP popular: simpler reasoning principles, better modularity, good for parallelism
-- Functional programming honors **immutability** and favors **higher-order functions** and **function composition**
 - **Higher order function** (HOF)
   - are functions that take other functions as arguments and may themselves return functions as their output
   - reduce code duplication, increase reuse, and make code concise
