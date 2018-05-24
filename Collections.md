@@ -32,6 +32,9 @@ Scala-specific Collections
 - The method `/:` is equivalent to `foldLeft` and `\:` to `foldRight`
 - Concatenating `::`
 
+## Stream
+- ???
+
 ### Seq
 - ???
 
