@@ -1,5 +1,6 @@
 Generela Information
 ====================
+
 - Scala 1.1.1 (2004); 2.0 (2006)
 - It supports an **imperative and a functional style** (it could be a blessing and a curse)
 - It is **purely object-oriented**. Scala code has to be in an object or a class.
