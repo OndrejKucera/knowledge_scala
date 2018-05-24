@@ -1,4 +1,4 @@
-Knowledge Scala
+Knowledge - Scala
 ====================
 
 Note: The notes are not exhausted knowledge about Scala.
