@@ -30,6 +30,7 @@ Scala-specific Collections
 - Add element on the begining `val prefixedList = "newElement" :: feeds`
 - There are also methods `filter`, `forall`, `exists`, `map`,
 - The method `/:` is equivalent to `foldLeft` and `\:` to `foldRight`
+- Concatenating `::`
 
 ### Seq
 - ???
