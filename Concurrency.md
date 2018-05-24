@@ -10,3 +10,6 @@ Concurrency
 - **Lazy Collection**
   - Strict Collection can be turn into lazy collection -> `view` method
   - `people.view.filter {isOlderThan17}.filter {isNameStartsWithJ}.head` The every item will go one be one through pipline 
+
+- **Lazy Stream**
+  -
