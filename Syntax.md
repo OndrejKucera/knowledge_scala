@@ -18,6 +18,12 @@ Scala Syntax
 - Three double quotes (`"""…"""`) for creation of String on more lines
 - String literals with expresion `val message = s "A discount of $discount% has been applied"`
 
+### Tuple
+- It is in `scala` package
+- Tuple can hold multiple values with same or different types together.
+- It is an immutable object sequence created as comma-separated values. i.e. `(1,2,3)` tuple literal (Tuple3)
+- `var (x,y,z) = (1,2,3)` tuple unpacking via pattern matching.
+
 ### Loops
 - **for expression**:
   - basic for loop `for ( i <- i to 3 ) { ... }`
