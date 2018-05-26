@@ -33,6 +33,11 @@ Concurrency
     system.shutdown() 	
   }
 ```
+### Rocommendations
+  - Rely more on stateless actors instead of stateful actors.
+  - Keep the processing in the receive method really fast, especially if the receiving actor is stateful
+  - Ensure the messages passed between actors are immutable objects (i.e. case class, String, or Int)
+  - As much as possible, avoid using ask (two-way communication)
 
 ## Laziness in programming
 - **Lazy Evaluation**
