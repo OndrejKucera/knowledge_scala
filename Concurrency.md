@@ -8,6 +8,7 @@ Concurrency
   - Scala uses actors from **Akka**, a reactive library
   - Actor is object which never calls methods directly. Every actor recieve message for invoking the method.
   - **The messages** are queued and waiting. The senders are never blocked (fire-and-forget).
+  - Akka provides a huge number of facilities to configure the thread pool size, the message queue size, and many other parameters, including interacting with remote actors.
 ### Definition of Actor
   - The body of the `receive` method looks familiar -> it’s the pattern matching syntax but witout match. The match is happening on an implicit message object. The body of the method is a partially applied function.
 ```scala
