@@ -1,6 +1,10 @@
 Concurrency
 =============
 
+- Concurency problems: thread safety, race conditions, deadlocks, livelocks, and hard-to-read error prone code. <- Shared mutability
+- How to remove mutability? -> Actor
+  - Actors help to turn shared mutability into isolated mutability
+
 - **Lazy Evaluation**
   - Scala can postpone evaluating the value until it’s really needed.
   - `lazy val perform = expensiveComputation()`
