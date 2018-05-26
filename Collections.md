@@ -38,7 +38,7 @@ Scala-specific Collections
 ### Seq
 - ???
 
-### Methods of Collesctions
+### Methods of Collections
 - foldLeft - `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
 - foreach - `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
 - ... Lets read: https://docs.scala-lang.org/overviews/collections/overview.html
@@ -48,3 +48,9 @@ Scala-specific Collections
 - Tuple is the collection class in Scala which can hold multiple values with same or different types together.
 - It is an immutable object sequence created as comma-separated values. i.e. `(1,2,3)` tuple literal (Tuple3)
 - `var (x,y,z) = (1,2,3)` tuple unpacking via pattern matching.
+
+## Parallel collections
+  - Parallel collections are in `scala.collection.parallel.immutable` package can do parallel processing of elements in a collection
+  - Low-level threads and locks can increase accidental complexity and concurrency-related errors. But it’s easy to parallelize operations on a collection of data, in Scala.
+  - Immutable collections have method `par` that converts them into parallel ones.
+  - If the operations, invoked on the collection, modify a global state then the overall result of the computation is unpredictable. Shared mutability is generally a bad idea.
