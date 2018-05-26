@@ -1,9 +1,30 @@
 Concurrency
 =============
 
-- Concurency problems: thread safety, race conditions, deadlocks, livelocks, and hard-to-read error prone code. <- Shared mutability
-- How to remove mutability? -> Actor
-  - Actors help to turn shared mutability into isolated mutability
+- **Concurency problems**: thread safety, race conditions, deadlocks, livelocks, and hard-to-read error prone code. <- Shared mutability
+- How to remove a mutability? -> Actors help to turn shared mutability into isolated mutability.
+
+- **Actors**
+  - Scala uses actors from **Akka**, a reactive library
+  - Actor is object which never calls methods directly. Every actor recieve message for invoking the method.
+  - The messages are queued and waiting the senders are never blocked (fire-and-forget).
+  - The body of the `receive` method looks familiar -> it’s the pattern matching syntax but witout match. The match is happening on an implicit message object. The body of the method is a partially applied function.
+  - Definition of Actor:  
+```scala
+  import akka.actor._
+	
+  class MyActor() extends Actor {	
+    def receive = {	
+      case message => println(s"actore process $message")
+    }
+  }
+```
+  - Create of an Actor:
+```scala
+
+```
+
+### Laziness
 
 - **Lazy Evaluation**
   - Scala can postpone evaluating the value until it’s really needed.
@@ -22,11 +43,5 @@ Concurrency
   - concatenate a stream `1 #:: Stream(2)`
   - `take` or `takeWhile` methods can take just few items from the Stream
 
-- **Parallelism**
-  - Parallel collections are in `scala.collection.parallel.immutable` package can do parallel processing of elements in a collection
-  - Low-level threads and locks can increase accidental complexity and concurrency-related errors. But it’s easy to parallelize operations on a collection of data, in Scala
-  - Collection iterator - `map`, `filter`, `foldLeft`
-  - Immutable collections  has method `par` that converts them into parallel ones.
-  - If the operations invoked on the collection modify a global state, then the overall result of the computation is unpredictable—shared mutability is generally a bad idea.
+
   
-- **Actors**
