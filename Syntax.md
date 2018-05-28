@@ -11,6 +11,7 @@ Scala Syntax
 - Operator overloading - Scala has no operators, so an operator overloading means overloading a method etc. +, ...
 - Short-circuit evaluation - Boolean expressions are same as a Java’s `&&` and `||`, do not always need their right operand to be evaluated.
 - **Type** aliasing `type MyAlias = OldClass`
+- load input from console `StdIn.readLine()`
 
 ### String
 - is simply `java.lang.String`
