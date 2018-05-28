@@ -55,8 +55,18 @@ catch {
 - You have to be careful wiht order of catching exceptions 
 
 ### Files
+- Write
 ```scala
 val writer = new PrintWriter(new File("symbols.txt"))
 writer write "AAPL"
 writer.close()
 ```
+- Read
+  - read a lines: `Source.getLines())`
+  - read from web: `Source.fromURL(new URL("http://localhost"))`
+```scala
+import scala.io.Source
+println("*** The content of the file you read is:") 	
+Source.fromFile("ReadingFile.scala").foreach { print }
+```
+
