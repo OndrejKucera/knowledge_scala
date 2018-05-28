@@ -53,3 +53,10 @@ catch {
 }
 ```
 - You have to be careful wiht order of catching exceptions 
+
+### Files
+```scala
+val writer = new PrintWriter(new File("symbols.txt"))
+writer write "AAPL"
+writer.close()
+```
