@@ -56,5 +56,5 @@ res1: List[Int] = List(42)
 
 ### Variadic Function
 - Little syntactic sugar for creating and passing a Seq of elements explicitly
-- It is possible passing more than one argument
+- It is possible passing zero or more than one argument
 - i.e. func(s: String*)
