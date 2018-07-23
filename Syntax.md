@@ -42,7 +42,8 @@ for([pattern <- generator; definition*]+; filter*)
 - Scala doesn't force you to check exception that you are not care about. Those you don’t handle are propagated automatically
 - Scala treats all exceptions as if they’re unchecked! :-)
 - example of thrown `IllegalArgumentException`
-- you can use try-catch as in Java but the syntax of catch is quite different in Scala
+- you can use try-catch as in Java but the syntax of catch is quite different in Scala (patter-matching)
+- you have to be careful with order of catching exceptions
 ```scala
 try {
   ....	
@@ -52,7 +53,7 @@ catch {
   case ex: RuntimeException => ...
 }
 ```
-- You have to be careful wiht order of catching exceptions 
+
 
 ### Files
 - Write
