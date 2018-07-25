@@ -14,7 +14,22 @@ Scala-specific Collections
  - **Traversable**
    - It has one abstract operation `def foreach[U](f: Elem => U)`, which has to be implemented.
    - [Operations in Class Traversable](https://docs.scala-lang.org/overviews/collections/trait-traversable.html#operations-in-class-traversable)
- - **Iterable** - ??? -> https://docs.scala-lang.org/overviews/collections/trait-iterable.html
+ - **Iterable** - https://docs.scala-lang.org/overviews/collections/trait-iterable.html
+
+### Methods of Collections
+- `++` - appends two collections together
+- `map` - apply function on each elemnt in the collection and return the collection
+- `flatMap` - apply function on each elemnt in the collection and concatenate the return items
+- `foldLeft` - `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`, 
+- `reduce` - reduceLeft is a special case of foldLeft `(1 to 3).reduce((x, y) => x+ y)` 
+- `foreach` - `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
+- Conversions: `toArray`, `toList`, `toIterable`, `toSeq`, `toIndexedSeq`, `toStream`, `toSet`, `toMap`
+- Size of: `isEmpty`, `nonEmpty`, `size`, and `hasDefiniteSize`
+- Element retrieval: `head`, `last`, `find`
+- Sub-collection retrieval: `tail`, `init`, `slice`, `take`, `drop`, `takeWhile`, `filter`
+- Subdivision: `splitAt`, `span`, `partition`, `groupBy`
+- Element tests: `exists`, `forall`, `count`
+- Specific folds: `sum`, `product`, `min`, `max`
 
 ### Seq
 - traits IndexedSeq, LinearSeq -> https://docs.scala-lang.org/overviews/collections/seqs.html
@@ -44,12 +59,6 @@ Scala-specific Collections
 - To get a feed for a person, simply use the `get` method. The return type of `get` is `Option[T]`.
 - To add a feed, use the `updated` method. It has no effect on the original Map.
 - There are also methods `filterKey`, `filter`, ...
-
-### Methods of Collections
-- foldLeft - `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
-- foreach - `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
-- reduce - `(1 to 3).reduce((x, y) => x+ y)` reduceLeft is a special case of foldLeft
-- ... Lets read: https://docs.scala-lang.org/overviews/collections/overview.html
 
 ## Parallel collections
   - Parallel collections are in `scala.collection.parallel.immutable` package can do parallel processing of elements in a collection
