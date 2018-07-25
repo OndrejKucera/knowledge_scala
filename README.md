@@ -9,9 +9,9 @@ Note: The notes are not exhausted knowledge about Scala.
 4) [OOP in Scala](https://github.com/OndrejKucera/knowledge_scala/blob/master/OOP.md)
 5) [Functions](https://github.com/OndrejKucera/knowledge_scala/blob/master/Functions.md)
 6) [Scala Collections](https://github.com/OndrejKucera/knowledge_scala/blob/master/Collections.md)
-7) [Error Handling]()
-    - [Exceptions]
-    - [Option & Either]
+7) [Error Handling](https://github.com/OndrejKucera/knowledge_scala/blob/master/Error_Handling.md)
+    - [Exceptions](https://github.com/OndrejKucera/knowledge_scala/blob/master/Error_Handling.md#exceptions)
+    - [Option & Either](https://github.com/OndrejKucera/knowledge_scala/blob/master/Error_Handling.md#option--either)
 8) [Pattern Matching](https://github.com/OndrejKucera/knowledge_scala/blob/master/Pattern_Matching.md)
     - [Regular Expression](https://github.com/OndrejKucera/knowledge_scala/blob/master/Pattern_Matching.md#regular-expression)
 9) [Concurrency](https://github.com/OndrejKucera/knowledge_scala/blob/master/Concurrency.md)
