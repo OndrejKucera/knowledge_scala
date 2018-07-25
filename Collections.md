@@ -17,7 +17,7 @@ Scala-specific Collections
  - **Iterable** - ??? -> https://docs.scala-lang.org/overviews/collections/trait-iterable.html
 
 ### Seq
-- traits IndexedSeq, LinearSeq
+- traits IndexedSeq, LinearSeq -> https://docs.scala-lang.org/overviews/collections/seqs.html
 - **List**
   - Is subclass of `Seq` -> `LinearSeq` -> `List`
   - It is an ordered collection of objects
