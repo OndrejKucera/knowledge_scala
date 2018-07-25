@@ -27,7 +27,7 @@ Scala Syntax
 
 ### Loops
 - **for expression**:
-  - basic for loop `for ( i <- i to 3 ) { ... }`
+  - basic for loop `for ( i <- i to 3 ) { ... }` which has side effects
   - The `yield` keyword is optional and, if present, tells the expression to return a list of values instead of a `Unit`. i.e. `val result = for (i <- 1 to 10) yield i * 2`
   - applied the filter part: `val doubleEven = for (i <- 1 to 10; if i % 2 == 0) yield i * 2`
   - multiple generators: `for (i <- 1 to 3; j <- 4 to 6) { print(s"[$i,$j] ") }`
