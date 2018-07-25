@@ -41,6 +41,7 @@ Scala-specific Collections
 ### Methods of Collections
 - foldLeft - `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
 - foreach - `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
+- reduce - `(1 to 3).reduce((x, y) => x+ y)` reduceLeft is a special case of foldLeft
 - ... Lets read: https://docs.scala-lang.org/overviews/collections/overview.html
 
 ## Parallel collections
