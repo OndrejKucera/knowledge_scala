@@ -4,6 +4,7 @@ Knowledge - Scala
 Note: The notes are not exhausted knowledge about Scala.
 
 1) [General Information](https://github.com/OndrejKucera/knowledge_scala/blob/master/General_Information.md)
+    - [Functional Paradigm](https://github.com/OndrejKucera/knowledge_scala/blob/master/General_Information.md#functional-paradigm)
 2) [Scala Types](https://github.com/OndrejKucera/knowledge_scala/blob/master/Scala_Types.md)
 3) [Scala Syntax](https://github.com/OndrejKucera/knowledge_scala/blob/master/Syntax.md)
 4) [OOP in Scala](https://github.com/OndrejKucera/knowledge_scala/blob/master/OOP.md)
