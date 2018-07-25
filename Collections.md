@@ -14,7 +14,10 @@ Scala-specific Collections
  - **Traversable**
    - It has one abstract operation `def foreach[U](f: Elem => U)`, which has to be implemented.
    - [Operations in Class Traversable](https://docs.scala-lang.org/overviews/collections/trait-traversable.html#operations-in-class-traversable)
- - **Iterable** - https://docs.scala-lang.org/overviews/collections/trait-iterable.html
+ - **Iterable**
+   - It implements funtion `foreach`
+   - It has three function which return iterator `iterator`, `grouped(size)` and `sliding(size)` 
+   - https://docs.scala-lang.org/overviews/collections/trait-iterable.html
 
 ### Methods of Collections
 - `++` - appends two collections together
