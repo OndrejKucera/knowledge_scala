@@ -16,6 +16,8 @@ OOP in Scala
 - Scala will execute as part of the primary constructor any expression or executable statement directly placed into the class definition.
 - Primary constructor can be marked as private `class Marker private(val color: String)`
 - **Abstract class** is non-createable `abstract class D { ... }`
+  - You want to create a base class that requires constructor arguments -> However, be aware that a class can extend only one abstract class.
+  - Your Scala code will be called from Java code
 - **Extending Class** similarly as in Java. There are only two deferences. The keyword `override` is required and primary constructor can pass parameters to a base constructor.
   - `class Car(override val id: Int) extends Vehicle(id) { ... }`
 - **Implicit class** Instead of creating a regular class and a separate implicit conversion method you can use class as adapter or converter.
