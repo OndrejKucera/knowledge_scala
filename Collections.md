@@ -2,10 +2,17 @@ Scala-specific Collections
 ==============
 (Of course you can still use the collections from the JDK such as ArrayList, HashSet, and simple arrays)
 
-- Scala favors immutable collection (`scala.collection.immutable.`), even though mutable versions are avaliable too (`scala.collection.mutable`).
+- All collection classes are found in the package `scala.collection` -> look at [the picture](https://docs.scala-lang.org/resources/images/collections.png) of all collections in package (abstract classes or traits)
+- Scala favors immutable collection (`scala.collection.immutable.`) [image of tree](https://docs.scala-lang.org/resources/images/collections.immutable.png), even though mutable versions are avaliable too (`scala.collection.mutable`) [image of tree](https://docs.scala-lang.org/resources/images/collections.mutable.png)
+- A mutable collection can be updated or extended in place. Change, add, or remove elements of a collection as a side effect.
+- Immutable collections, by contrast, never change. Each operation returns a new collection and leave the old collection unchanged.
 - If you don’t mention a package name, then, by default, Scala brings on board immutable collections. Because the object Predef (included by default) provides aliases for Set and Map to point to the immutable implementations.
 - Immutable collections are thread safe, free from side effects, and help with program correctness.
 - The ability to create an object without `new` is because of a special `apply` method, also called a factory method. `Set(1, 2, 4)`
+
+### Main traits
+ - Traversable
+ - Iterable
 
 ### Set
 - `HashSet`, `TreeSet`, `BitSet`, `ListSet`
