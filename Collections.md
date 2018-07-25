@@ -11,8 +11,24 @@ Scala-specific Collections
 - The ability to create an object without `new` is because of a special `apply` method, also called a factory method. `Set(1, 2, 4)`
 
 ### Main traits
- - Traversable
- - Iterable
+ - **Traversable**
+   - It has one abstract operation `def foreach[U](f: Elem => U)`, which has to be implemented.
+   - [Operations in Class Traversable](https://docs.scala-lang.org/overviews/collections/trait-traversable.html#operations-in-class-traversable)
+ - **Iterable** - ??? -> https://docs.scala-lang.org/overviews/collections/trait-iterable.html
+
+### Seq
+- traits IndexedSeq, LinearSeq
+- **List**
+  - Is subclass of `Seq` -> `LinearSeq` -> `List`
+  - It is an ordered collection of objects
+  - The most operations on the list are structured around operations on the `head` and `tail`.
+  - The accesing the second element `val element = list(1)`
+  - Add element on the begining `val prefixedList = "newElement" :: feeds`
+  - There are also methods `filter`, `forall`, `exists`, `map`,
+  - The method `/:` is equivalent to `foldLeft` and `\:` to `foldRight`
+  - Concatenating `::`
+- **Stream**
+  - ???
 
 ### Set
 - `HashSet`, `TreeSet`, `BitSet`, `ListSet`
@@ -28,22 +44,6 @@ Scala-specific Collections
 - To get a feed for a person, simply use the `get` method. The return type of `get` is `Option[T]`.
 - To add a feed, use the `updated` method. It has no effect on the original Map.
 - There are also methods `filterKey`, `filter`, ...
-
-### List
-- Is subclass of `Seq` -> `LinearSeq` -> `List`
-- It is an ordered collection of objects
-- The most operations on the list are structured around operations on the `head` and `tail`.
-- The accesing the second element `val element = list(1)`
-- Add element on the begining `val prefixedList = "newElement" :: feeds`
-- There are also methods `filter`, `forall`, `exists`, `map`,
-- The method `/:` is equivalent to `foldLeft` and `\:` to `foldRight`
-- Concatenating `::`
-
-### Stream
-- ???
-
-### Seq
-- ???
 
 ### Methods of Collections
 - foldLeft - `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`
