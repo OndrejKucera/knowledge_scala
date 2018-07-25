@@ -19,7 +19,7 @@ Scala-specific Collections
    - It has three function which return iterator `iterator`, `grouped(size)` and `sliding(size)` 
    - https://docs.scala-lang.org/overviews/collections/trait-iterable.html
 
-### Methods of Collections
+### Methods of Traversable
 - `++` - appends two collections together
 - `map` - apply function on each elemnt in the collection and return the collection
 - `flatMap` - apply function on each elemnt in the collection and concatenate the return items
