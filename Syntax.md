@@ -38,23 +38,6 @@ for([pattern <- generator; definition*]+; filter*)
 - **while** loop `while (x < 5) {x += 1}`
 - **do while** loop `do { println(x); x += 1} while (x < 5)`
 
-### Exceptions
-- Scala doesn't force you to check exception that you are not care about. Those you don’t handle are propagated automatically
-- Scala treats all exceptions as if they’re unchecked! :-)
-- example of thrown `IllegalArgumentException`
-- you can use try-catch as in Java but the syntax of catch is quite different in Scala (patter-matching)
-- you have to be careful with order of catching exceptions
-```scala
-try {
-  ....	
-}
-catch {
-  case ex: IllegalArgumentException => ...	
-  case ex: RuntimeException => ...
-}
-```
-
-
 ### Files
 - Write
 ```scala
