@@ -30,7 +30,7 @@ Functions
 - `def loop: Boolean = loop`, is going to be evaluated always and only once
 - `val loop: Boolean = loop`, is going to be evaluated immediately and **won’t terminate**
 
-## Partially Applied Function
+### Partially Applied Function
 - The first bind a value to the date parameter. We use the `_` to leave the second parameter unbound.
 ```scala
 val date = new Date(1420095600000L) 	
@@ -40,12 +40,6 @@ logWithDateBound("message2")
 ```
 - When you create a partially applied function, Scala internally creates a new class with a special apply method.
 
-### Parametrized (Generic) Functions
-- The notation `[T]` signals to the compiler that the type `T` that follows is not some existing
-- Scala will require that the arguments be of the same type, but there is type `Any` so the call `echo("hi", 5)` will unfortunately work.
-  - `def echo[T](input1: T, input2: T) = println(s"got $input1 (${input1.getClass}) $input2 (${input2.getClass})")`
-  - `def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean`
-
 ### Partial Function
 - It is defined with `case` blocks
 ```scala
@@ -53,6 +47,12 @@ scala> List(41, "cat") collect { case i: Int ⇒ i + 1 }
 res1: List[Int] = List(42)
 ```
 - Scala has built-in support for partial functions thanks to the `PartialFunction` trait. A `PartialFunction` must provides a method `isDefinedAt`, which allows the caller of the partial function to know, beforehand, whether the function can return a result for a given input value.
+
+### Parametrized (Generic) Functions
+- The notation `[T]` signals to the compiler that the type `T` that follows is not some existing
+- Scala will require that the arguments be of the same type, but there is type `Any` so the call `echo("hi", 5)` will unfortunately work.
+  - `def echo[T](input1: T, input2: T) = println(s"got $input1 (${input1.getClass}) $input2 (${input2.getClass})")`
+  - `def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean`
 
 ### Variadic Function
 - Little syntactic sugar for creating and passing a Seq of elements explicitly
