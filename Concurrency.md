@@ -32,7 +32,7 @@ Concurrency
 - The only way to communicate with an actor is through an `ActorRef`
 - There are to ways how to send message to actor:
   - `!` (“tell”) – sends the message and returns immediately
-  - `?` (“ask”) – sends the message and returns a Future representing a possible reply
+  - `?` (“ask”) – sends the message and returns a [Future](https://github.com/OndrejKucera/knowledge_scala/blob/master/Concurrency.md#future) representing a possible reply
 
 ### Definition of Actor
   - The body of the `receive` method looks familiar -> it’s the pattern matching syntax but witout match. The match is happening on an implicit message object. The body of the method is a partially applied function.
