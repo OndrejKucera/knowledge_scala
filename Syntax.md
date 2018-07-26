@@ -20,8 +20,8 @@ Scala Syntax
 - String literals with expresion `val message = s "A discount of $discount% has been applied"`
 
 ### Tuple
-- It is in `scala` package
-- Tuple can hold multiple values with same or different types together.
+- Tuples aren’t collections. They don’t have methods like `map`, `filter`, etc.
+- Tuple can hold multiple (from two to 22 items) values with same or different types together.
 - It is an immutable object sequence created as comma-separated values. i.e. `(1,2,3)` tuple literal (Tuple3)
 - `var (x,y,z) = (1,2,3)` tuple unpacking via pattern matching.
 
