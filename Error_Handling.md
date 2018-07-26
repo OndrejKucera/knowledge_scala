@@ -28,3 +28,26 @@ try {
   - for-comprehension (`for { ... } yield (...)`) is often use for striping the Options and get the values -> The compiler desugars the bindings to flatMap calls, with the final binding and yield being converted to a call to map.
 - **Either** - - Option doesn’t tell us anything about what went wrong in the case of an exceptional condition. 
   - An instance of Either is an instance of either `scala.util.Left` (error) or `scala.util.Right` (right value).
+
+### Try
+- `Try` makes it very simple to catch exceptions.
+- Instances of Try are `Success` that contains the number and `Failure` contains the exception message.
+```
+def toInt(s: String): Try[Int] = Try {
+    Integer.parseInt(s.trim)
+}
+
+// using matching
+toInt(x) match {
+    case Success(i) => println(i)
+    case Failure(s) => println(s"Failed. Reason: $s")
+}
+
+// using for-expression
+val y = for {
+    a <- toInt(stringA)
+    b <- toInt(stringB)
+    c <- toInt(stringC)
+} yield a + b + c
+```
+
