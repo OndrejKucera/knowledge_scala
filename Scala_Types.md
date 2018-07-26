@@ -31,9 +31,17 @@ Scala is statically typed language
 - `String`, `Char`
 - For large numbers `BigInt` and `BigDecimal`
 
-### Comparison
-- Scala’s `==` represents value-based comparison, no matter what the type is (This is ensured by implementing `==` as final in the class `Any`)
-- `eq` method provides identity-based comparison on references
+### String
+- is simply `java.lang.String`
+- The String is automatically converted to `scala.runtime.RichString`. This brings a few useful methods like `capitalize`, `lines`, and `reverse`.
+- Three double quotes (`"""…"""`) for creation of String on more lines
+- String literals with expresion `val message = s "A discount of $discount% has been applied"`
+
+### Tuple
+- Tuples aren’t collections. They don’t have methods like `map`, `filter`, etc.
+- Tuple can hold multiple (from two to 22 items) values with same or different types together.
+- It is an immutable object sequence created as comma-separated values. i.e. `(1,2,3)` tuple literal (Tuple3)
+- `var (x,y,z) = (1,2,3)` tuple unpacking via pattern matching.
 
 ### Type Inference
 - Types of values can be inferred, but you can also explicitly state the type.
@@ -65,5 +73,3 @@ val pets = new Array[Pet](10)
 copyPets(dogs, pets)
 ```
 - `+T` allow covariance, `-T` support contravariance
-
-
