@@ -65,4 +65,26 @@ Concurrency
   - As much as possible, avoid using ask (two-way communication)
   
 ## Future
-- ???
+- While an Akka actor runs for a long time and is intended to handle many messages over its lifetime, a Scala Future is intended as a one-shot
+- Construct futures to run (relatively slow) tasks off of the main thread
+- A future starts running as soon as you construct it
+- If you’re using multiple futures to yield a single result, you’ll often want to combine them in a **for-expression**
+```
+  val result: Future[(Double, Double, Double)] = for {
+    f <- firstFuture
+    s <- secondFuture
+    t <- thirdFuture
+  } yield (f, s, t)
+```
+- A benefit of futures over threads is that they come with a variety of callback methods that simplify the process of working with concurrent threads, including the handling of exceptions and thread management
+- The value in a Future is always an instance of one of the `Try` types: `Success` or `Failure` -> use Try-handling techniques, or one of the Future callback methods.
+```
+a.onComplete {
+    case Success(value) => println(s"Got the callback, value = $value")
+    case Failure(e) => e.printStackTrace
+}
+```
+- Futures methods that you can use.
+  - Common callback methods are: `onComplete`, `onSuccess`, `onFailure`
+  - Futures have methods that you’ll find on Scala collections classes, including: `filter`, `foreach`, `map`
+  - Other useful and well-named methods include: `andThen`, `fallbackTo`, `recoverWith`
