@@ -7,12 +7,12 @@ Scala is statically typed language
   - Prefer `val` over `var` as much as possible since that promotes **immutability**, which leads to fewer errors, and functional style. 
 - **Variables** are like values, except you can re-assign them (mutabel)
 - **Blocks** are expressions by surrounding `{ }`. Last expression in the block is the result.
-- **Functions** are expressions that take parameters.
+- [**Functions**](https://github.com/OndrejKucera/knowledge_scala/blob/master/Functions.md) are expressions that take parameters.
   - Anonymous function `(x: Int) => x + 1`.
   - You can name it `val fun = ( ) => println(“hello”)`.
   - It can have zero or multiple parameters.
   - When we define a function literal, what is actually being defined in Scala is an object with a method called apply
-- [**Methods**](https://github.com/OndrejKucera/knowledge_scala/blob/master/Functions.md) are defined with `def`. That is followed by a name, parameter lists, a return type, and a body. Methods can take multiple parameter lists.
+- **Methods** are defined with `def`. That is followed by a name, parameter lists, a return type, and a body. Methods can take multiple parameter lists.
 - [**Class**](https://github.com/OndrejKucera/knowledge_scala/blob/master/OOP.md#class) defines with the keyword `class` followed by its name and constructor parameters. The instance of class can be created with the `new` keyword. Classes in Scala cannot have static members. You can use objects to achieve similar functionality as with static members in Java.
 - [**Object**](https://github.com/OndrejKucera/knowledge_scala/blob/master/OOP.md#object) is single instances of its own definition. It is singleton `object`, which simultaneously declares also class and it’s only instance. (like instance of an anonymous class in Java)
 - [**Trait**](https://github.com/OndrejKucera/knowledge_scala/blob/master/OOP.md#traits) contains certain fields and methods. Methods in `trait` can have default implementation or override implementation.
