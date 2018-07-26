@@ -4,11 +4,18 @@ Concurrency
 - **Concurency problems**: thread safety, race conditions, deadlocks, livelocks, and hard-to-read error prone code. <- Shared mutability
 - How to remove a mutability? -> Actors help to turn shared mutability into isolated mutability.
 
-## Actors
-  - Scala uses actors from **Akka**, a reactive library
-  - Actor is object which never calls methods directly. Every actor recieve message for invoking the method.
-  - **The messages** are queued and waiting. The senders are never blocked (fire-and-forget).
-  - Akka provides a huge number of facilities to configure the thread pool size, the message queue size, and many other parameters, including interacting with remote actors.
+## Actor Model
+- Scala uses actors from **Akka**, a reactive library
+- An actor is a long-running process that runs in parallel to the main application thread, and responds to messages that are sent to it.
+- Actors are much easier to work with than threads; you program at a much higher level of abstraction.
+- An actor is the smallest unit of functionality when building an actor-based system
+- Only way how to comunicate with actor is throw messages.
+- The message is immutable (typically as a case class or case object in Akka). These messages are queued in the actor’s mailbox.
+- The senders are never blocked (fire-and-forget).
+- An actor has one parent, known as a supervisor and it can have children.
+- Delegation: Actor should delegate its work. Actors need to be able to respond to messages in their mailbox as fast as possible.
+- Akka provides a huge number of facilities to configure the thread pool size, the message queue size, and many other parameters, including interacting with remote actors.
+
 ### Definition of Actor
   - The body of the `receive` method looks familiar -> it’s the pattern matching syntax but witout match. The match is happening on an implicit message object. The body of the method is a partially applied function.
 ```scala
