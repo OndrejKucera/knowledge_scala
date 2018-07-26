@@ -10,33 +10,44 @@ Scala-specific Collections
 - Immutable collections are thread safe, free from side effects, and help with program correctness.
 - The ability to create an object without `new` is because of a special `apply` method, also called a factory method. `Set(1, 2, 4)`
 
-### Main traits
+### Main Collection Traits
  - **Traversable**
    - It has one abstract operation `def foreach[U](f: Elem => U)`, which has to be implemented.
    - [Operations in Class Traversable](https://docs.scala-lang.org/overviews/collections/trait-traversable.html#operations-in-class-traversable)
+   - **Operations**
+     - `++` - appends two collections together
+     - `map` - apply function on each elemnt in the collection and return the collection
+     - `flatMap` - apply function on each elemnt in the collection and concatenate the return items
+     - `foldLeft` - `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`, 
+     - `reduce` - reduceLeft is a special case of foldLeft `(1 to 3).reduce((x, y) => x+ y)` 
+     - `foreach` - `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
+     - **Conversions**: `toArray`, `toList`, `toIterable`, `toSeq`, `toIndexedSeq`, `toStream`, `toSet`, `toMap`
+     - **Size of**: `isEmpty`, `nonEmpty`, `size`, and `hasDefiniteSize`
+     - **Element retrieval**: `head`, `last`, `find`
+     - **Sub-collection retrieval**: `tail`, `init`, `slice`, `take`, `drop`, `takeWhile`, `filter`
+     - **Subdivision**: `splitAt`, `span`, `partition`, `groupBy`
+     - **Element tests**: `exists`, `forall`, `count`
+     - **Specific folds**: `sum`, `product`, `min`, `max`
  - **Iterable**
    - It implements funtion `foreach`
    - It has three function which return iterator `iterator`, `grouped(size)` and `sliding(size)` 
    - https://docs.scala-lang.org/overviews/collections/trait-iterable.html
 
-### Methods of Traversable
-- `++` - appends two collections together
-- `map` - apply function on each elemnt in the collection and return the collection
-- `flatMap` - apply function on each elemnt in the collection and concatenate the return items
-- `foldLeft` - `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`, 
-- `reduce` - reduceLeft is a special case of foldLeft `(1 to 3).reduce((x, y) => x+ y)` 
-- `foreach` - `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
-- Conversions: `toArray`, `toList`, `toIterable`, `toSeq`, `toIndexedSeq`, `toStream`, `toSet`, `toMap`
-- Size of: `isEmpty`, `nonEmpty`, `size`, and `hasDefiniteSize`
-- Element retrieval: `head`, `last`, `find`
-- Sub-collection retrieval: `tail`, `init`, `slice`, `take`, `drop`, `takeWhile`, `filter`
-- Subdivision: `splitAt`, `span`, `partition`, `groupBy`
-- Element tests: `exists`, `forall`, `count`
-- Specific folds: `sum`, `product`, `min`, `max`
-
-### Seq
-- traits IndexedSeq, LinearSeq -> https://docs.scala-lang.org/overviews/collections/seqs.html
-- **List**
+### Seq Trait
+- The `Seq` trait represents sequences. A sequence is a kind of iterable that has a `length` and whose elements have fixed index positions, starting from 0.
+- traits `IndexedSeq`, `LinearSeq`: they do not add any new operations, but each offers different performance characteristics
+  - A linear sequence (List, Stream, Queue, Stack) has efficient head and tail
+  - indexed sequence (Array, ArrayBuffer, Vector) has efficient apply and length (if mutable seq then update operation)
+- **Operations** 
+  - **Index search**: `indexOf`, ...
+  - **Addition**: `+:`, `:+`, `padTo`
+  - **Update**: `updated`
+  - **Sorting**: `sorted`, `sortWith`, `sortBy`
+  - **Reversal**: `reverse`, ...
+  - **Comparisons**: `contains`, ...
+  - **Multiset**: `intersect`, `diff`, `union`, `distinct`
+  
+#### List
   - Is subclass of `Seq` -> `LinearSeq` -> `List`
   - It is an ordered collection of objects
   - The most operations on the list are structured around operations on the `head` and `tail`.
@@ -45,10 +56,11 @@ Scala-specific Collections
   - There are also methods `filter`, `forall`, `exists`, `map`,
   - The method `/:` is equivalent to `foldLeft` and `\:` to `foldRight`
   - Concatenating `::`
-- **Stream**
+  
+#### Stream
   - ???
 
-### Set
+### Set Trait
 - `HashSet`, `TreeSet`, `BitSet`, `ListSet`
 - Set holds an element at most once and it is an unordered collection. 
 - Scala optimizes the implementation of Set for smaller values, and creates an implementation of HashSet for values higher than 4.
@@ -56,7 +68,7 @@ Scala-specific Collections
 - intersect operation `val commonFeeds = feeds1 & feeds2`
 - there are also methods `map`, `filter`, `foreach`, ...
 
-### Map
+### Map Trait
 - `HashMap`, `TreeMap`, `ListMap`
 - It is a dictionary of key-value pairs.
 - To get a feed for a person, simply use the `get` method. The return type of `get` is `Option[T]`.
