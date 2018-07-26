@@ -26,6 +26,8 @@ Note: The notes are not exhausted knowledge about Scala.
     - [Regular Expression](https://github.com/OndrejKucera/knowledge_scala/blob/master/Pattern_Matching.md#regular-expression)
 9) [Laziness](https://github.com/OndrejKucera/knowledge_scala/blob/master/Laziness.md)
 10) [Concurrency](https://github.com/OndrejKucera/knowledge_scala/blob/master/Concurrency.md)
+    - [Actor Model](https://github.com/OndrejKucera/knowledge_scala/blob/master/Concurrency.md#actor-model)
+    - [Future](https://github.com/OndrejKucera/knowledge_scala/blob/master/Concurrency.md#future)
 
 ...
 Still in progress
