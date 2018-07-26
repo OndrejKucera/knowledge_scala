@@ -11,7 +11,7 @@ Scala-specific Collections
 - The ability to create an object without `new` is because of a special `apply` method, also called a factory method. `Set(1, 2, 4)`
 
 ### Main Collection Traits
- - **Traversable**
+ - **Traversable Trait**
    - It has one abstract operation `def foreach[U](f: Elem => U)`, which has to be implemented.
    - [Operations in Class Traversable](https://docs.scala-lang.org/overviews/collections/trait-traversable.html#operations-in-class-traversable)
    - **Operations**
@@ -28,10 +28,9 @@ Scala-specific Collections
      - **Subdivision**: `splitAt`, `span`, `partition`, `groupBy`
      - **Element tests**: `exists`, `forall`, `count`
      - **Specific folds**: `sum`, `product`, `min`, `max`
- - **Iterable**
+ - **Iterable Trait**
    - It implements funtion `foreach`
    - It has three function which return iterator `iterator`, `grouped(size)` and `sliding(size)` 
-   - https://docs.scala-lang.org/overviews/collections/trait-iterable.html
 
 ### Seq
 - The `Seq` trait represents sequences. A sequence is a kind of iterable that has a `length` and whose elements have fixed index positions, starting from 0.
