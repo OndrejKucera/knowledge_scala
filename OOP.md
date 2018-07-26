@@ -41,6 +41,9 @@ class Message[T](val content: T) {
 - **Static in Scala**
   - There is no `static` in Scala because it would break the pure OO mode.
   - You can write the static-like method in singleton object. The `apply` method does it.
+- **Case object**
+  - two important features that make it useful: serializable, default hashCode implementation
+  - using: creating containers for “messages” that is passing between other objects (such as with Akka)
 
 ### Traits
 - Traits are like Java's interfaces with a partial implementation
