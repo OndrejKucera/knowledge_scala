@@ -13,9 +13,15 @@ Scala Syntax
 - **Type** aliasing `type MyAlias = OldClass`
 - load input from console `StdIn.readLine()`
 
+### Comparison
+- Scala’s `==` represents value-based comparison, no matter what the type is (This is ensured by implementing `==` as final in the class `Any`)
+- `eq` method provides identity-based comparison on references
+
 ### Loops
-- **for**:
-  - basic **for-loop** `for ( i <- i to 3 ) { ... }` which has side effects. **For-expression** is used to create new collections from existing collections
+- **while** loop `while (x < 5) {x += 1}`
+- **do while** loop `do { println(x); x += 1} while (x < 5)`
+- **for-loop** `for ( i <- i to 3 ) { ... }` which has side effects.
+- **for-expression** is used to create new collections from existing collections
   - The `yield` keyword is optional and, if present, tells the expression to return a list of values instead of a `Unit`. i.e. `val result = for (i <- 1 to 10) yield i * 2`
   - applied the filter part: `val doubleEven = for (i <- 1 to 10; if i % 2 == 0) yield i * 2`
   - multiple generators: `for (i <- 1 to 3; j <- 4 to 6) { print(s"[$i,$j] ") }`
@@ -23,8 +29,6 @@ Scala Syntax
 for([pattern <- generator; definition*]+; filter*)
   [yield] expression
 ```
-- **while** loop `while (x < 5) {x += 1}`
-- **do while** loop `do { println(x); x += 1} while (x < 5)`
 
 ### Files
 - Write
