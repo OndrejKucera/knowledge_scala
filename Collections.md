@@ -33,7 +33,7 @@ Scala-specific Collections
    - It has three function which return iterator `iterator`, `grouped(size)` and `sliding(size)` 
    - https://docs.scala-lang.org/overviews/collections/trait-iterable.html
 
-### Seq Trait
+### Seq
 - The `Seq` trait represents sequences. A sequence is a kind of iterable that has a `length` and whose elements have fixed index positions, starting from 0.
 - traits `IndexedSeq`, `LinearSeq`: they do not add any new operations, but each offers different performance characteristics
   - A linear sequence (List, Stream, Queue, Stack) has efficient head and tail
@@ -48,7 +48,7 @@ Scala-specific Collections
   - **Multiset**: `intersect`, `diff`, `union`, `distinct`
   
 #### List
-  - Is subclass of `Seq` -> `LinearSeq` -> `List`
+  - Is subclass of `LinearSeq`
   - It is an ordered collection of objects
   - The most operations on the list are structured around operations on the `head` and `tail`.
   - The accesing the second element `val element = list(1)`
@@ -60,7 +60,7 @@ Scala-specific Collections
 #### Stream
   - ???
 
-### Set Trait
+### Set
 - `HashSet`, `TreeSet`, `BitSet`, `ListSet`
 - Set holds an element at most once and it is an unordered collection. 
 - Scala optimizes the implementation of Set for smaller values, and creates an implementation of HashSet for values higher than 4.
@@ -68,7 +68,7 @@ Scala-specific Collections
 - intersect operation `val commonFeeds = feeds1 & feeds2`
 - there are also methods `map`, `filter`, `foreach`, ...
 
-### Map Trait
+### Map
 - `HashMap`, `TreeMap`, `ListMap`
 - It is a dictionary of key-value pairs.
 - To get a feed for a person, simply use the `get` method. The return type of `get` is `Option[T]`.
