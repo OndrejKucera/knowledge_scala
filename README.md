@@ -21,6 +21,7 @@ Note: The notes are not exhausted knowledge about Scala.
 7) [Error Handling](https://github.com/OndrejKucera/knowledge_scala/blob/master/Error_Handling.md)
     - [Exceptions](https://github.com/OndrejKucera/knowledge_scala/blob/master/Error_Handling.md#exceptions)
     - [Option & Either](https://github.com/OndrejKucera/knowledge_scala/blob/master/Error_Handling.md#option--either)
+    - [Try](https://github.com/OndrejKucera/knowledge_scala/blob/master/Error_Handling.md#try)
 8) [Pattern Matching](https://github.com/OndrejKucera/knowledge_scala/blob/master/Pattern_Matching.md)
     - [Regular Expression](https://github.com/OndrejKucera/knowledge_scala/blob/master/Pattern_Matching.md#regular-expression)
 9) [Concurrency](https://github.com/OndrejKucera/knowledge_scala/blob/master/Concurrency.md)
