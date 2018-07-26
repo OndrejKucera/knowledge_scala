@@ -37,7 +37,7 @@ class Message[T](val content: T) {
 - **Companion object**:
   - It is possible to associate a singleton to a class.
   - You have to create `class` with private constructor and the `object` with same name.
-  - Companion object has ability to create instance of class without useing the `new` keyword
+  - Companion object has ability to create instance of class without useing the `new` keyword -> The apply method in the companion object acts as a factory method.
 - **Static in Scala**
   - There is no `static` in Scala because it would break the pure OO mode.
   - You can write the static-like method in singleton object. The `apply` method does it.
