@@ -25,7 +25,6 @@ Note: The notes are not exhausted knowledge about Scala.
 8) [Pattern Matching](https://github.com/OndrejKucera/knowledge_scala/blob/master/Pattern_Matching.md)
     - [Regular Expression](https://github.com/OndrejKucera/knowledge_scala/blob/master/Pattern_Matching.md#regular-expression)
 9) [Concurrency](https://github.com/OndrejKucera/knowledge_scala/blob/master/Concurrency.md)
-10) [Unit Testing](https://github.com/OndrejKucera/knowledge_scala/blob/master/Unit_Testing.md)
 
 ...
 Still in progress
