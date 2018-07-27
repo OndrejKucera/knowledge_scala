@@ -60,12 +60,17 @@ Scala-specific Collections
   - ???
 
 ### Set
-- `HashSet`, `TreeSet`, `BitSet`, `ListSet`
-- Set holds an element at most once and it is an unordered collection. 
-- Scala optimizes the implementation of Set for smaller values, and creates an implementation of HashSet for values higher than 4.
+- Set is an unordered collection and contains no duplications.
+- Operations:
+  - **Tests**: `contains`, `subsetOf`
+  - **Additions**: `+`, `++`
+  - **Removals**: `-`, `--`
+  - **Set op.**: `intersect`, `union`, and `diff`
 - merging two Sets by `val mergedFeeds = feeds1 ++ feeds2`
 - intersect operation `val commonFeeds = feeds1 & feeds2`
-- there are also methods `map`, `filter`, `foreach`, ...
+- Scala optimizes the implementation of Set for smaller values, and creates an implementation of HashSet for values higher than 4.
+- `HashSet`, `TreeSet`, `BitSet`, `ListSet`
+
 
 ### Map
 - `HashMap`, `TreeMap`, `ListMap`
