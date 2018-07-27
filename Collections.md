@@ -58,6 +58,8 @@ Scala-specific Collections
   - Representation by shallow tree 
   - It has more evenly balanced access to the items than List
   - More efficient for bulk operation (map, filter, ...) than List
+- **Range**
+  - `1 until 5` => 1,2,3,4 ; `1 to 5` => 1,2,3,4,5 ; `1 to 10 by 3`
 - **Stream**
   - ???
 
