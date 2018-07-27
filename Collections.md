@@ -69,8 +69,18 @@ Scala-specific Collections
 - merging two Sets by `val mergedFeeds = feeds1 ++ feeds2`
 - intersect operation `val commonFeeds = feeds1 & feeds2`
 - Scala optimizes the implementation of Set for smaller values, and creates an implementation of HashSet for values higher than 4.
-- `HashSet`, `TreeSet`, `BitSet`, `ListSet`
-
+- **ListSet**
+- **TreeSet**
+  - It is ordered binary tree. All elements in the left subtree of a node are smaller than all elements in the right subtree
+  - `immutable.TreeSet` uses a red-black tree to maintain ordering and balance (paths from the root of the tree to a leaf have lengths that differ only by at most one element).
+  ```scala
+    val myOrdering = Ordering.fromLessThan[String](_ > _)
+    TreeSet.empty(myOrdering)
+  ```
+- **BitSet**
+  - Sets of non-negative integer. It uses for representation an array of Longs
+  - Advantage is that operations such as membership test with contains, or element addition and removal are extremely efficient.
+- **HashSet**
 
 ### Map
 - `HashMap`, `TreeMap`, `ListMap`
