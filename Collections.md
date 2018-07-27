@@ -45,8 +45,7 @@ Scala-specific Collections
   - **Reversal**: `reverse`, ...
   - **Comparisons**: `contains`, ...
   - **Multiset**: `intersect`, `diff`, `union`, `distinct`
-  
-#### List
+- **List**
   - Is subclass of `LinearSeq`
   - It is an ordered collection of objects
   - The most operations on the list are structured around operations on the `head` and `tail`.
@@ -55,8 +54,7 @@ Scala-specific Collections
   - There are also methods `filter`, `forall`, `exists`, `map`,
   - The method `/:` is equivalent to `foldLeft` and `\:` to `foldRight`
   - Concatenating `::`
-  
-#### Stream
+- **Stream**
   - ???
 
 ### Set
