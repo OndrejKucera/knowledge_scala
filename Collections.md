@@ -36,7 +36,7 @@ Scala-specific Collections
 - The `Seq` trait represents sequences. A sequence is a kind of iterable that has a `length` and whose elements have fixed index positions, starting from 0.
 - traits `IndexedSeq`, `LinearSeq`: they do not add any new operations, but each offers different performance characteristics
   - A linear sequence (List, Stream, Queue, Stack) has efficient head and tail
-  - indexed sequence (Array, ArrayBuffer, Vector) has efficient apply and length (if mutable seq then update operation)
+  - Indexed sequence (ArrayBuffer, Vector) has efficient apply and length (if mutable seq then update operation)
 - **Operations** 
   - **Index search**: `indexOf`, ...
   - **Addition**: `+:`, `:+`, `padTo`
@@ -54,6 +54,10 @@ Scala-specific Collections
   - There are also methods `filter`, `forall`, `exists`, `map`,
   - The method `/:` is equivalent to `foldLeft` and `\:` to `foldRight`
   - Concatenating `::`
+- **Vector**
+  - Representation by shallow tree 
+  - It has more evenly balanced access to the items than List
+  - More efficient for bulk operation (map, filter, ...) than List
 - **Stream**
   - ???
 
