@@ -15,7 +15,7 @@ def unit[T](f: T): M[T]  // also called identity
 - The `unit` function performs the wrapping part.
 
 - Three laws of Monad:
-  - **associativity law:**: `m.flatMap(f).flatMap(g) == m.flatMap(x => f(x).flatMap(g))`
+  - **associativity law**: `m.flatMap(f).flatMap(g) == m.flatMap(x => f(x).flatMap(g))`
   - **left-identity law**: `unit(x).flatMap(f) == f(x)`
   - **right-identity law**: `m.flatMap(unit) == m`
 
