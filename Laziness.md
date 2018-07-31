@@ -4,6 +4,7 @@ Laziness in programming
 - **Lazy Evaluation**
   - Scala can postpone evaluating the value until it’s really needed.
   - `lazy val perform = expensiveComputation()`
+    - diference between `def x = expr` and `lazy val x = expr`. The `def` will be evaluated every time when it is called but the `lazy val` value will be evaluated just once and then the result will be reused.
   - You can mark any variable as lazy and the binding to its value will be postponed until the first use of that variable.
   - Carefuly with lazy variables -> the order of evaluation can be unknown -> the problem with sides effects
 - **Lazy Collection**
