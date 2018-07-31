@@ -61,7 +61,9 @@ Scala-specific Collections
 - **Range**
   - `1 until 5` => 1,2,3,4 ; `1 to 5` => 1,2,3,4,5 ; `1 to 10 by 3`
 - **Stream**
-  - ???
+  - Stream's tail is evaluated only on demand
+  - creating Stream `(1 to 1000).toStream`
+  - concat in stream `#::`
 
 ### Set
 - Set is an unordered collection and contains no duplications.
