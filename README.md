@@ -28,6 +28,7 @@ Note: The notes are not exhausted knowledge about Scala.
 10) [Concurrency](https://github.com/OndrejKucera/knowledge_scala/blob/master/Concurrency.md)
     - [Actor Model](https://github.com/OndrejKucera/knowledge_scala/blob/master/Concurrency.md#actor-model)
     - [Future](https://github.com/OndrejKucera/knowledge_scala/blob/master/Concurrency.md#future)
+11) [Monads](https://github.com/OndrejKucera/knowledge_scala/blob/master/Monads.md)
 
 ...
 Still in progress
