@@ -84,7 +84,7 @@ Scala-specific Collections
 - Scala optimizes the implementation of Set for smaller values, and creates an implementation of HashSet for values higher than 4.
 - **ListSet**
 - **TreeSet**
-  - It is ordered binary tree. All elements in the left subtree of a node are smaller than all elements in the right subtree
+  - It is ordered binary tree (red-black tree). All elements in the left subtree of a node are smaller than all elements in the right subtree
   - `immutable.TreeSet` uses a red-black tree to maintain ordering and balance (paths from the root of the tree to a leaf have lengths that differ only by at most one element).
   ```scala
     val myOrdering = Ordering.fromLessThan[String](_ > _)
@@ -103,9 +103,12 @@ Scala-specific Collections
   - **removal*: `-`, `--`
   - **subcollection**: `keys`, `keySet`, `values`, ...
   - **Transformations**: `mapValues`, `filterKeys`
-- `HashMap`, `TreeMap`, `ListMap`
-- To get a feed for a person, simply use the `get` method. The return type of `get` is `Option[T]`.
-- To add a feed, use the `updated` method. It has no effect on the original Map.
+- **HashMap**
+- **TreeMap** - red-black tree
+- **ListMap** - linked list of key-value pairs. It has little usage
+- Hash Tree: every node has 32 elements (or 32 subtrees). The selection of key is based on hashcode
+- method `get` get a value of pair in map. The return type of `get` is `Option[T]`.
+- method `updated` adds a feed. It has no effect on the original Map.
 
 ## Parallel collections
   - Parallel collections are in `scala.collection.parallel.immutable` package can do parallel processing of elements in a collection
