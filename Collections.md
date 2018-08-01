@@ -52,20 +52,28 @@ Scala-specific Collections
   - Constatnt time to get `head`, `tail` and add item on the begining of list. Other operation has linear time.
   - The accesing the second element `val element = list(1)`
   - Concatenating `::` => adding element on the begining `val prefixedList = "newElement" :: feeds`
-- **Vector**
-  - Representation by shallow tree 
-  - It has more evenly balanced access to the items than List
-  - More efficient for bulk operation (map, filter, ...) than List
-- **Range**
-  - `1 until 5` => 1,2,3,4 ; `1 to 5` => 1,2,3,4,5 ; `1 to 10 by 3`
 - **Stream**
   - It is like List (same performace characteristic) but computed lazily => tail is evaluated only on demand
   - Stream can be infinitely long
   - creating Stream `(1 to 1000).toStream`
   - Concatenating `#::`
-
+- **Vector**
+  - Represents by shallow tree with a high branching factor => every tree node contains up to 32 elements of the vector or contains up to 32 other tree nodes.
+  - It has more evenly balanced access to the items than List => almost constant
+  - More efficient for bulk operation (map, filter, ...) than List
+- **Stack**
+  - last-in-first-out sequence
+  - `push`, `pop`, `top` are in constant time
+  - Immutable stacks are used rarely
+- **Queue**
+  - last-in-first-out sequence
+  - `enqueue`, `dequeue`,
+- **Range**
+  - ordered sequence
+  - `1 until 5` => 1,2,3,4 ; `1 to 5` => 1,2,3,4,5 ; `1 to 10 by 3`
+ 
 ### Set
-- Set is an unordered collection and contains no duplications.
+- Set is an unordered collection and contains no duplications
 - Operations:
   - **Tests**: `contains`, `subsetOf`
   - **Additions**: `+`, `++`
