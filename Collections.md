@@ -35,8 +35,8 @@ Scala-specific Collections
 ### Seq
 - The `Seq` trait represents sequences. A sequence is a kind of iterable that has a `length` and whose elements have fixed index positions, starting from 0.
 - traits `IndexedSeq`, `LinearSeq`: they do not add any new operations, but each offers different performance characteristics
-  - A linear sequence (List, Stream, Queue, Stack) has efficient head and tail
-  - Indexed sequence (ArrayBuffer, Vector) has efficient apply and length (if mutable seq then update operation)
+  - **Linear sequence** (List, Stream, Queue, Stack) has efficient head and tail
+  - **Indexed sequence** (Range, Vector, ...) has efficient apply and length (if mutable seq then update operation)
 - **Operations** 
   - **Index search**: `indexOf`, ...
   - **Addition**: `+:`, `:+`, `padTo`
@@ -47,13 +47,11 @@ Scala-specific Collections
   - **Multiset**: `intersect`, `diff`, `union`, `distinct`
 - **List**
   - Is subclass of `LinearSeq`
-  - It is an ordered collection of objects
   - The most operations on the list are structured around operations on the `head` and `tail`.
+  - It is an ordered collection of objects
+  - Constatnt time to get `head`, `tail` and add item on the begining of list. Other operation has linear time.
   - The accesing the second element `val element = list(1)`
-  - Add element on the begining `val prefixedList = "newElement" :: feeds`
-  - There are also methods `filter`, `forall`, `exists`, `map`,
-  - The method `/:` is equivalent to `foldLeft` and `\:` to `foldRight`
-  - Concatenating `::`
+  - Concatenating `::` => adding element on the begining `val prefixedList = "newElement" :: feeds`
 - **Vector**
   - Representation by shallow tree 
   - It has more evenly balanced access to the items than List
