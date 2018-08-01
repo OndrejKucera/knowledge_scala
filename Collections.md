@@ -89,11 +89,16 @@ Scala-specific Collections
 - **HashSet**
 
 ### Map
+- Map consists of key-value pairs.
+- Operations:
+  - **lookup**: `apply`, `get`, `getOrElse`
+  - **updates**: `+`, `++`, `update`
+  - **removal*: `-`, `--`
+  - **subcollection**: `keys`, `keySet`, `values`, ...
+  - **Transformations**: `mapValues`, `filterKeys`
 - `HashMap`, `TreeMap`, `ListMap`
-- It is a dictionary of key-value pairs.
 - To get a feed for a person, simply use the `get` method. The return type of `get` is `Option[T]`.
 - To add a feed, use the `updated` method. It has no effect on the original Map.
-- There are also methods `filterKey`, `filter`, ...
 
 ## Parallel collections
   - Parallel collections are in `scala.collection.parallel.immutable` package can do parallel processing of elements in a collection
