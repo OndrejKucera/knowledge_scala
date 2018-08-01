@@ -100,7 +100,7 @@ Scala-specific Collections
 - Operations:
   - **lookup**: `apply`, `get`, `getOrElse`
   - **updates**: `+`, `++`, `update`
-  - **removal*: `-`, `--`
+  - **removal**: `-`, `--`
   - **subcollection**: `keys`, `keySet`, `values`, ...
   - **Transformations**: `mapValues`, `filterKeys`
 - **HashMap**
