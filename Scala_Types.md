@@ -32,7 +32,8 @@ Scala is statically typed language
 - For large numbers `BigInt` and `BigDecimal`
 
 ### String
-- is simply `java.lang.String`
+- It is simply `java.lang.String`
+- Strings are not directly sequences, but they can be converted to them, and they also support all sequence operations on strings (thanks to implicit conversion)
 - The String is automatically converted to `scala.runtime.RichString`. This brings a few useful methods like `capitalize`, `lines`, and `reverse`.
 - Three double quotes (`"""…"""`) for creation of String on more lines
 - String literals with expresion `val message = s "A discount of $discount% has been applied"`
