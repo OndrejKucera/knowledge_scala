@@ -18,7 +18,7 @@ Scala-specific Collections
      - `++` - appends two collections together
      - `map` - apply function on each elemnt in the collection and return the collection
      - `flatMap` - apply function on each elemnt in the collection and concatenate the return items
-     - `foldLeft` - `val sum = array.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`, 
+     - `foldLeft` - `val sum = list.foldLeft(0) { (sum, elem) => sum + elem }` or with operator `/:`, 
      - `reduce` - reduceLeft is a special case of foldLeft `(1 to 3).reduce((x, y) => x+ y)` 
      - `foreach` - `( 1 to 3 ).foreach( ... )` We used the foreach method of the Range class
      - **Conversions**: `toArray`, `toList`, `toIterable`, `toSeq`, `toIndexedSeq`, `toStream`, `toSet`, `toMap`
@@ -109,6 +109,12 @@ Scala-specific Collections
 - Hash Tree: every node has 32 elements (or 32 subtrees). The selection of key is based on hashcode
 - method `get` get a value of pair in map. The return type of `get` is `Option[T]`.
 - method `updated` adds a feed. It has no effect on the original Map.
+
+### Array
+- It is same as Java array, but it has some enhacements
+- Scala Array can be generic Array[T]
+- Scala Array is compatibile with sequences -> you can pass an Array[T] where a Seq[T]
+- It supports all sequence operations thanks to implicit conversions
 
 ## Parallel collections
   - Parallel collections are in `scala.collection.parallel.immutable` package can do parallel processing of elements in a collection
