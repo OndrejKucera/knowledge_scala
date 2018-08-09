@@ -9,6 +9,7 @@ Scala-specific Collections
 - If you don’t mention a package name, then, by default, Scala brings on board immutable collections. Because the object Predef (included by default) provides aliases for Set and Map to point to the immutable implementations.
 - Immutable collections are thread safe, free from side effects, and help with program correctness.
 - The ability to create an object without `new` is because of a special `apply` method, also called a factory method. `Set(1, 2, 4)`
+- [Performance characteristics](https://docs.scala-lang.org/overviews/collections/performance-characteristics.html)
 
 ### Main Collection Traits
  - **Traversable Trait**
