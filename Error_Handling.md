@@ -26,7 +26,7 @@ try {
   - A common pattern is to transform an `Option` via calls to `map`, `flatMap`, and/or `filter`, and then use `getOrElse` to do error handling at the end. `lookupByName("Joe").map(_.dept).filter(_ != "Accounting").getOrElse("Default Dept")`
   - A common idiom is to do o.getOrElse(throw new Exception("FAIL")) to convert the None case of an Option back to an exception.
   - for-comprehension (`for { ... } yield (...)`) is often use for striping the Options and get the values -> The compiler desugars the bindings to flatMap calls, with the final binding and yield being converted to a call to map.
-- **Either** - - Option doesn’t tell us anything about what went wrong in the case of an exceptional condition. 
+- **Either** Option doesn’t tell us anything about what went wrong in the case of an exceptional condition. 
   - An instance of Either is an instance of either `scala.util.Left` (error) or `scala.util.Right` (right value).
 
 ### Try
